@@ -1,0 +1,13 @@
+{
+    "title": "执着任性 不易相处",
+    "links": {
+        "gitbook": false,
+        "sharing": {
+            "google": false,
+            "facebook": false,
+            "twitter": false,
+            "all": false
+        }
+    },
+    "plugins": ["favicon"]
+}
