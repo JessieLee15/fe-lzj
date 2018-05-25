@@ -102,3 +102,19 @@ Text prior to footnote reference.[^2]
 <div>
 Markdown here will not be **parsed**
 </div>
+
+### Horizontal Rule
+Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+### Ignoring Markdown formatting
+using `\`
+
+Let's rename \*our-new-project\* to \*our-old-project\*.
