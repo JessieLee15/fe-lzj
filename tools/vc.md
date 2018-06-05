@@ -10,6 +10,8 @@
   a.”workbench.editor.enablePreview": false, 
 
   b.要把当前的preview文件变成open：双击tab上的文件名或者edit->save
+
+  ---
   
 ## VC插件Local History使用说明：
 一直怀念IntelliJ的系列IDE的强大及良好体验～
@@ -41,3 +43,4 @@
     "**/.history": true
   },
   ```
+  ___
