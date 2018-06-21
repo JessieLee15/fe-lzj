@@ -20,8 +20,9 @@ gitbook build . ./output
 其他配置
 新建book.json，可以做一些配置，比如标题，作者，指定readme文件，关闭分享链接等。
 
+---
 
-## gitbook 语法
+## Markdown 语法
 
 ### 字体
 *This text will be italic*
