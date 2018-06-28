@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [JS](js/README.md)
+    * [points](js/points.md)
 * [Browser](browser/README.md)
     * [坑坑坑](browser/keng.md)
 * [Network](network/README.md)
