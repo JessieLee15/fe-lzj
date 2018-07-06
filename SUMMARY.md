@@ -19,4 +19,6 @@
 * [Algorithm](algorithm/README.md)
 * [TODO](other/README.md)
 * [About Gitbook](GITBOOK.md)
+* [LZJ](J/README.md)
+    * [留给我的孩子看的动画列表](J/cartoon.md)
 
