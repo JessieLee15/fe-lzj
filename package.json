@@ -1,0 +1,21 @@
+{
+  "name": "fe-lzj",
+  "version": "1.0.0",
+  "description": "Jessie`s blog",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "gitbook-plugin-favicon": "^0.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gitbook build",
+    "serve": "gitbook serve ./docs"
+  },
+  "keywords": [],
+  "author": "Jessica Lee",
+  "license": "ISC"
+}
