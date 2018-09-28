@@ -119,3 +119,28 @@ Asterisks
 using `\`
 
 Let's rename \*our-new-project\* to \*our-old-project\*.
+
+
+---
+
+# Publish Gitbook on GitHub
+
+通过github的GitHub Pages功能
+
+#### 详细发布流程：
+
+1. 本地/源码准备：
+  * 在项目目录（一级目录）下新建docs文件夹，用于存放gitbook build 后的网页文件。
+  ![docs](img/gitbook/docs.png)
+  * 将gitbook build后的资源放到docs文件夹下（`gitbook build ./ ./docs`），如果没有其他设置，gitbook默认build后的路径在项目目录下的_book下面（此文件一般会被视为编译后文件ignore）
+  * 建议使用npm管理项目，可以设置npm相应指令，替代加冗长的gitbook指令，配置参考此源码的package.json
+
+2. 远程GitHub仓库设置：
+  * Settings下面设置Repository name，设置好后在后面的GitHub Pages部分就可以看到：Your site is published at ***
+  * 在GitHub Pages部分设置source，选择 master branch/docs folder
+  ![github_pages](img/gitbook/github_pages.png)
+
+  At last，打开Your site is published at的链接，就可以看到你的gitbook页面啦～
+
+
+
