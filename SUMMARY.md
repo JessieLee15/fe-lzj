@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [JS](js/README.md)
     * [points](js/points.md)
+    * [closure](js/closure.md)
 * [Browser](browser/README.md)
     * [坑坑坑](browser/keng.md)
     * [你了解URL吗](browser/url.md)
