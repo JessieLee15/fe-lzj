@@ -120,6 +120,12 @@ using `\`
 
 Let's rename \*our-new-project\* to \*our-old-project\*.
 
+### Table
+Name | Academy | score 
+  - | :-: | -: 
+  Harry Potter | Gryffindor| 90 
+  Hermione Granger | Gryffindor | 100 
+  Draco Malfoy | Slytherin | 90
 
 ---
 
