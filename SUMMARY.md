@@ -13,6 +13,8 @@
     * [Ajax](network/ajax.md)
 * [Vue](vue/README.md)
     * [Vue.API](vue/api.md)
+* [React](react/README.md)
+    * [入门学习笔记](react/note.md)
 * [Tools](tools/README.md)
     * [VC](tools/vc.md)
     * [SHELL](tools/shell.md)
