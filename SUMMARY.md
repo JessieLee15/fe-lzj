@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [TODOS](TODOS.md)
 * [JS](js/README.md)
     * [points](js/points.md)
     * [closure](js/closure.md)
