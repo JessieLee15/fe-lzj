@@ -233,4 +233,27 @@ __引用及参考资源__:
 ---
 
 
+Usage: release [options]
+ 
+  Options:
+ 
+    -h, --help             output usage information
+    -d, --dest <names>     release output destination
+    -m, --md5 [level]      md5 release option
+    -D, --domains          add domain name
+    -l, --lint             with lint
+    -t, --test             with unit testing
+    -o, --optimize         with optimizing
+    -p, --pack             with package
+    -w, --watch            monitor the changes of project
+    -L, --live             automatically reload your browser
+    -c, --clean            clean compile cache
+    -r, --root <path>      set project root
+    -f, --file <filename>  set fis-conf file
+    -u, --unique           use unique compile caching
+    --verbose              enable verbose output
+
+
+
+
 [^N2018-06-19]: 宠辱不惊，闲看庭前花开花落；去留无意，漫随天外云卷云舒。
