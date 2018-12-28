@@ -24,6 +24,7 @@
     * [Tips](other/tips.md)
 * [Algorithm](algorithm/README.md)
 * [TODO](other/README.md)
+* [MIS-前端改造解决方案](lsh/mis-solve.md)
 * [About Gitbook](GITBOOK.md)
 * [LZJ](J/README.md)
     * [留给孩子看的动画列表](J/cartoon.md)

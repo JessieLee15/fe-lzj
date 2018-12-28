@@ -8,6 +8,9 @@
 ___解决：__
 
 使用隐藏标签a或button
+[解决办法] (https://www.cnblogs.com/digdeep/p/4590337.html?tvd)
+
+[触发a标签跳转] (https://blog.csdn.net/aopao1/article/details/75258129)
 
 ___
 
