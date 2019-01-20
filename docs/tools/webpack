@@ -1,0 +1,3 @@
+
+src目录下的资源只能import或require。
+想静态引入的话，建立一个与src同级的目录例如static，然后把静态资源放入该文件夹下，html的引入路径如下：./static/...
