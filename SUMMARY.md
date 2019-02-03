@@ -2,6 +2,8 @@
 
 * [Introduction](README.md)
 * [TODOS](TODOS.md)
+* [HTML、CSS](html/README.md)
+    * [html-标签](html/tags.md)
 * [JS](js/README.md)
     * [points](js/points.md)
     * [closure](js/closure.md)
@@ -25,6 +27,7 @@
     * [Fis](other/fis.md)
     * [Tips](other/tips.md)
     * [Exception](other/exception.md)
+    * [BS Render](other/render.md)
 * [Algorithm](algorithm/README.md)
 * [TODO](other/README.md)
 * [MIS-前端改造解决方案](lsh/mis-solve.md)
