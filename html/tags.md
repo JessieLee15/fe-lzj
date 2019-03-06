@@ -1,12 +1,15 @@
 # html-标签
 
 # 标签
-* head里面的元信息类（title meta style link base）描述文档的基本信息
+* head里面的元信息类（title meta style link base）：描述文档的基本信息
 * 语义类（section nav 类div）
 * 替换类（img video audio）
 * 表单类 （input button）
 * 表格类
 * ...
+
+## 元信息类标签
+
 
 ## 语义类标签
 
