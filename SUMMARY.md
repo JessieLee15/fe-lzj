@@ -33,6 +33,7 @@
     * [Tips](other/tips.md)
     * [Exception](other/exception.md)
     * [BS Render](other/render.md)
+    * [前端打印方案](other/print.md)
 * [Algorithm](algorithm/README.md)
 * [MIS-前端改造解决方案](lsh/mis-solve.md)
 * [About Gitbook](GITBOOK.md)
