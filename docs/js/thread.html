@@ -225,7 +225,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="es6.html">
+        <li class="chapter " data-level="1.5.3" data-path="runtime.html">
+            
+                <a href="runtime.html">
+            
+                    
+                    JavaScript 执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="es6.html">
             
                 <a href="es6.html">
             
@@ -238,7 +251,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.4" data-path="thread.html">
+        <li class="chapter active" data-level="1.5.5" data-path="thread.html">
             
                 <a href="thread.html">
             
@@ -251,7 +264,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="type.html">
+        <li class="chapter " data-level="1.5.6" data-path="type.html">
             
                 <a href="type.html">
             
@@ -264,7 +277,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="object.html">
+        <li class="chapter " data-level="1.5.7" data-path="object.html">
             
                 <a href="object.html">
             
@@ -723,8 +736,7 @@
                                 <h1 id="thread">Thread</h1>
 <p>js&#x6267;&#x884C;&#x73AF;&#x5883;&#xFF1A;&#x5355;&#x7EBF;&#x7A0B;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x53EA;&#x7ED9;js&#x4EFB;&#x52A1;&#x5F00;&#x4E86;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x591A;&#x4E2A;&#x4EFB;&#x52A1;&#x6392;&#x961F;&#x6267;&#x884C;&#xFF0C;&#x9047;&#x5230;&#x957F;&#x8017;&#x65F6;&#x4EFB;&#x52A1;&#x6216;&#x6B7B;&#x5FAA;&#x73AF;&#xFF0C;&#x9875;&#x9762;&#x5C31;&#x4F1A;&#x65E0;&#x54CD;&#x5E94;&#x3002;</p>
 <p>js&#x7684;&#x540C;&#x6B65;&#x548C;&#x5F02;&#x6B65;&#xFF1A;&#x672C;&#x8D28;&#x8FD8;&#x662F;&#x5355;&#x7EBF;&#x7A0B;&#xFF0C;&#x53EA;&#x662F;&#x4EFB;&#x52A1;&#x7684;&#x6267;&#x884C;&#x6A21;&#x5F0F;&#x4E0D;&#x540C; &#xFF08;&#x5F02;&#x6B65;&#x4EFB;&#x52A1;&#x4E0D;&#x5177;&#x6709;&#x201C;&#x5835;&#x585E;&#x201D;&#x6548;&#x5E94;&#xFF0C;&#x4E3A;&#x4E0D;&#x8FDE;&#x7EED;&#x7684;&#x6267;&#x884C;&#xFF09;</p>
-<hr>
-<h3 id="js&#x7684;&#x5F02;&#x6B65;&#x7F16;&#x7A0B;">js&#x7684;&#x5F02;&#x6B65;&#x7F16;&#x7A0B;</h3>
+<h2 id="js&#x7684;&#x5F02;&#x6B65;&#x7F16;&#x7A0B;">js&#x7684;&#x5F02;&#x6B65;&#x7F16;&#x7A0B;</h2>
 <h4 id="&#x4E00;-&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;callback&#xFF09;">&#x4E00;. &#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF08;Callback&#xFF09;</h4>
 <p>&#x7B80;&#x5355;&#x3001;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x548C;&#x5B9E;&#x73B0;&#xFF1B;&#x4E0D;&#x5229;&#x4E8E;&#x9605;&#x8BFB;&#x548C;&#x7EF4;&#x62A4;&#xFF0C;&#x8026;&#x5408;&#x9AD8;&#xFF0C;&#x5BFC;&#x81F4;Callback Hell&#xFF1B; &#x6BCF;&#x4E2A;&#x4EFB;&#x52A1;&#x53EA;&#x80FD;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF1B;try catch&#x6355;&#x83B7;&#x4E0D;&#x5230;&#x5F02;&#x5E38;&#xFF0C;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;return</p>
 <pre><code class="lang-javascript">ajax(url, () =&gt; {
@@ -751,6 +763,7 @@
 <h4 id="&#x4E09;-&#x53D1;&#x5E03;&#x8BA2;&#x9605;publish-subscribe-patternobserver-partten">&#x4E09;. &#x53D1;&#x5E03;&#x8BA2;&#x9605;(publish-subscribe pattern/observer partten)</h4>
 <p>&#x540C;&#x201C;&#x4E8B;&#x4EF6;&#x76D1;&#x542C;&#x201D;&#x7C7B;&#x4F3C;&#xFF1B;&#x51FA;&#x73B0;&#x201C;&#x6D88;&#x606F;&#x4E2D;&#x5FC3;&#x201D;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x4FE1;&#x53F7;</p>
 <h4 id="&#x56DB;-promisea">&#x56DB;. Promise/A+</h4>
+<p>&#x7F3A;&#x70B9;&#xFF1A;&#x65E0;&#x6CD5;&#x53D6;&#x6D88; Promise&#xFF0C;&#x9519;&#x8BEF;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x6355;&#x83B7;</p>
 <h5 id="1-promise-&#x72B6;&#x6001;">1. Promise &#x72B6;&#x6001;</h5>
 <ol>
 <li>Pending - Promise&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x521B;&#x5EFA;&#x65F6;&#x7684;&#x521D;&#x59CB;&#x72B6;&#x6001;</li>
@@ -770,6 +783,35 @@
 <span class="hljs-comment">//end</span>
 </code></pre>
 <h5 id="2-promise-&#x7684;&#x94FE;&#x5F0F;&#x8C03;&#x7528;">2. Promise &#x7684;&#x94FE;&#x5F0F;&#x8C03;&#x7528;</h5>
+<ul>
+<li>&#x6BCF;&#x6B21;&#x8FD4;&#x56DE;&#x7684;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x65B0;&#x7684;Promise&#x5B9E;&#x4F8B;</li>
+<li>&#x5982;&#x679C;then&#x4E2D;&#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x7ED3;&#x679C;&#xFF0C;&#x4F1A;&#x628A;&#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x4F20;&#x9012;&#x4E0B;&#x4E00;&#x6B21;then&#x4E2D;&#x7684;&#x6210;&#x529F;&#x56DE;&#x8C03;</li>
+<li>then&#x4E2D;&#x4F7F;&#x7528;return&#xFF1A;&#x4F1A;&#x88AB;Promise.resolve()&#x5305;&#x88C5;</li>
+<li>catch &#x4F1A;&#x6355;&#x83B7;&#x5230;&#x6CA1;&#x6709;&#x6355;&#x83B7;&#x7684;&#x5F02;&#x5E38;</li>
+</ul>
+<h4 id="&#x4E94;-&#x751F;&#x6210;&#x5668;-generatorsyield">&#x4E94;. &#x751F;&#x6210;&#x5668; Generators/yield</h4>
+<ul>
+<li>es6&#x8BED;&#x6CD5;</li>
+<li>&#x53EF;&#x4EE5;&#x63A7;&#x5236;&#x51FD;&#x6570;&#x6267;&#x884C;</li>
+<li><strong>generator/iterator&#x5E76;&#x975E;&#x5F02;&#x6B65;&#x4EE3;&#x7801;&#xFF0C;&#x662F;&#x4E00;&#x4E9B;&#x6846;&#x67B6;&#xFF08;co&#xFF09;&#x4F7F;&#x7528;&#x8FD9;&#x6837;&#x7684;&#x7279;&#x6027;&#x6765;&#x6A21;&#x62DF;async/await&#xFF1B;&#x4F46;&#x662F;generator/iterator&#x5E76;&#x975E;&#x88AB;&#x8BBE;&#x8BA1;&#x6210;&#x5B9E;&#x73B0;&#x5F02;&#x6B65;</strong><pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> *<span class="hljs-title">foo</span>(<span class="hljs-params">x</span>) </span>{
+<span class="hljs-keyword">let</span> y = <span class="hljs-number">2</span> * (<span class="hljs-keyword">yield</span> (x + <span class="hljs-number">1</span>))
+<span class="hljs-keyword">let</span> z = <span class="hljs-keyword">yield</span> (y / <span class="hljs-number">3</span>)
+<span class="hljs-keyword">return</span> (x + y + z)
+}
+<span class="hljs-keyword">let</span> it = foo(<span class="hljs-number">5</span>)
+<span class="hljs-built_in">console</span>.log(it.next())   <span class="hljs-comment">// =&gt; {value: 6, done: false}</span>
+<span class="hljs-built_in">console</span>.log(it.next(<span class="hljs-number">12</span>)) <span class="hljs-comment">// =&gt; {value: 8, done: false}</span>
+<span class="hljs-built_in">console</span>.log(it.next(<span class="hljs-number">13</span>)) <span class="hljs-comment">// =&gt; {value: 42, done: true}</span>
+</code></pre>
+</li>
+</ul>
+<h4 id="asyncawait">async/await</h4>
+<ul>
+<li>async/await &#x662F;&#x57FA;&#x4E8E; Promise &#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x5B83;&#x4E0D;&#x80FD;&#x7528;&#x4E8E;&#x666E;&#x901A;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;</li>
+<li>async/await &#x4E0E; Promise &#x4E00;&#x6837;&#xFF0C;&#x662F;&#x975E;&#x963B;&#x585E;&#x7684;</li>
+</ul>
+<p>&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5982;&#x679C;&#x52A0;&#x4E0A; async &#xFF0C;&#x90A3;&#x4E48;&#x8BE5;&#x51FD;&#x6570;&#x5C31;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; Promise</p>
+<h5 id="asyncawait-&#x5E76;&#x53D1;&#x8BF7;&#x6C42;">Async/Await &#x5E76;&#x53D1;&#x8BF7;&#x6C42;</h5>
 <p><strong>&#x5F15;&#x7528;&#x53CA;&#x53C2;&#x8003;&#x8D44;&#x6E90;</strong>: </p>
 <p><a href="https://mp.weixin.qq.com/s/Y21LMWcEatoBvtnqvQyxXg" target="_blank">js&#x7684;&#x540C;&#x6B65;&#x5F02;&#x6B65;</a></p>
 
@@ -815,7 +857,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Thread","level":"1.5.4","depth":2,"next":{"title":"类型","level":"1.5.5","depth":2,"path":"js/type.md","ref":"js/type.md","articles":[]},"previous":{"title":"ES6","level":"1.5.3","depth":2,"path":"js/es6.md","ref":"js/es6.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"favicon":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"执着任性 不易相处","links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"js/thread.md","mtime":"2019-01-15T10:12:46.939Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-17T03:15:29.578Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Thread","level":"1.5.5","depth":2,"next":{"title":"类型","level":"1.5.6","depth":2,"path":"js/type.md","ref":"js/type.md","articles":[]},"previous":{"title":"ES6","level":"1.5.4","depth":2,"path":"js/es6.md","ref":"js/es6.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"favicon":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"执着任性 不易相处","links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"js/thread.md","mtime":"2019-06-20T07:59:50.480Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-20T09:20:00.802Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -823,6 +865,10 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

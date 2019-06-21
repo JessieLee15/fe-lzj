@@ -115,6 +115,7 @@ console.log([o, n, arg, r, f, e].map( v => {return Object.prototype.toString.cal
 ES3和之前的版本，JS中类的概念相当弱，仅仅是运行时的一个字符串属性;
 
 ES5开始，[[class]]私有属性被Symbol.toStringTag代替，Object.prototype.toString的意义从命名上不再跟class相关。我们甚至可以自定义Object.prototype.toString的行为.
+
 #### new操作
 接受一个构造器和一组调用参数
 * 以构造器的prototype属性（注意与私有字段[[prototype]]的区分）为原型，创建新对象；

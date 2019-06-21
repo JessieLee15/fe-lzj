@@ -9,6 +9,7 @@
 * [JS](js/README.md)
     * [points](js/points.md)
     * [closure](js/closure.md)
+    * [JavaScript 执行](js/runtime.md)
     * [ES6](js/es6.md)
     * [Thread](js/thread.md)
     * [类型](js/type.md)
