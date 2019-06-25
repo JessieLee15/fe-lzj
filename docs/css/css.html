@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>css杂 · 执着任性 不易相处</title>
+        <title>css 选择器 · 执着任性 不易相处</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -172,7 +172,7 @@
                 <a href="css.html">
             
                     
-                    css杂
+                    css 选择器
             
                 </a>
             
@@ -718,7 +718,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >css杂</a>
+        <a href=".." >css 选择器</a>
     </h1>
 </div>
 
@@ -733,96 +733,195 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="css&#x6742;">css&#x6742;</h1>
-<h2 id="&#x8BED;&#x6CD5;">&#x8BED;&#x6CD5;</h2>
-<h3 id="at&#x89C4;&#x5219;">at&#x89C4;&#x5219;</h3>
-<p><a href="https://www.w3.org/TR/css-syntax-3/" target="_blank">@charset</a>
-&#x7528;&#x4E8E;&#x63D0;&#x793A;css&#x6587;&#x4EF6;&#x4F7F;&#x7528;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#xFF0C;&#x5982;&#x679C;&#x88AB;&#x4F7F;&#x7528;&#xFF0C;&#x5FC5;&#x987B;&#x5728;&#x6700;&#x524D;&#x9762;&#x3002;</p>
-<p><a href="https://www.w3.org/TR/css-cascade-4/" target="_blank">@import</a>
-&#x7528;&#x4E8E;&#x5F15;&#x5165;&#x4E00;&#x4E2A;css&#x6587;&#x4EF6;&#xFF0C;&#x9664;&#x4E86;@charset&#x89C4;&#x5219;&#x4E0D;&#x4F1A;&#x88AB;&#x5F15;&#x5165;&#xFF0C;@import&#x53EF;&#x4EE5;&#x5F15;&#x5165;&#x53E6;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5168;&#x90E8;&#x5185;&#x5BB9;&#xFF1B;&#x652F;&#x6301;supports&#x548C;media query&#x5F62;&#x52BF;&#x3002;</p>
-<p><a href="https://www.w3.org/TR/css3-conditional/" target="_blank">@media</a>
-media query</p>
-<p><a href="https://www.w3.org/TR/css-page-3/" target="_blank">@page</a>
-&#x7528;&#x4E8E;&#x5206;&#x9875;&#x5A92;&#x4F53;&#x8BBF;&#x95EE;&#x7F51;&#x9875;&#x65F6;&#x7684;&#x8868;&#x73B0;&#x8BBE;&#x7F6E;&#xFF0C;&#x9875;&#x9762;&#x662F;&#x4E00;&#x79CD;&#x7279;&#x6B8A;&#x7684;&#x76D2;&#x6A21;&#x578B;&#x7ED3;&#x6784;&#xFF0C;&#x9664;&#x4E86;&#x9875;&#x9762;&#x672C;&#x8EAB;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5B83;&#x5468;&#x56F4;&#x7684;&#x76D2;</p>
-<p><a href="https://www.w3.org/TR/css-counter-styles-3" target="_blank">@counter-style</a>
-&#x4EA7;&#x751F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#xFF0C;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x5217;&#x8868;&#x7684;&#x8868;&#x73B0;</p>
-<p><a href="https://www.w3.org/TR/css-animations-1/" target="_blank">@keyframes</a>
-&#x4EA7;&#x751F;&#x4E00;&#x79CD;&#x6570;&#x636E;&#xFF0C;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x52A8;&#x753B;&#x5173;&#x952E;&#x5E27;</p>
-<p><a href="https://www.w3.org/TR/css-fonts-3/" target="_blank">@fontface</a>
-&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x4E00;&#x79CD;&#x5B57;&#x4F53;&#xFF08;icon font&#x6280;&#x672F;&#x5C31;&#x662F;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x5B9E;&#x73B0;&#x7684;&#xFF09;</p>
-<p><a href="https://www.w3.org/TR/css3-conditional/" target="_blank">@supports</a>
-&#x68C0;&#x67E5;&#x73AF;&#x5883;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x8DDF;media&#x6BD4;&#x8F83;&#x7C7B;&#x4F3C;</p>
-<p><a href="https://www.w3.org/TR/css-namespaces-3/" target="_blank">@namespace</a>
-&#x7528;&#x4E8E;&#x8DDF;XML&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x914D;&#x5408;&#x7684;&#x4E00;&#x4E2A;&#x89C4;&#x5219;&#xFF0C;&#x8868;&#x793A;&#x5185;&#x90E8;&#x7684;CSS&#x9009;&#x62E9;&#x5668;&#x5168;&#x90FD;&#x5E26;&#x4E0A;&#x7279;&#x5B9A;&#x547D;&#x540D;&#x7A7A;&#x95F4;</p>
-<p>[@viewport] &#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x89C6;&#x53E3;&#x7684;&#x4E00;&#x4E9B;&#x7279;&#x6027;&#xFF0C;&#x4E0D;&#x8FC7;&#x517C;&#x5BB9;&#x6027;&#x4E0D;&#x662F;&#x558A;&#x597D;&#xFF0C;&#x591A;&#x6570;&#x65F6;&#x5019;&#x88AB;html&#x7684;meta&#x4EE3;&#x66FF;</p>
-<p>[&#x5176;&#x5B83;] &#x4E0D;&#x592A;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x7684;at&#x89C4;&#x5219;&#xFF1A;</p>
+                                <h1 id="css-&#x9009;&#x62E9;&#x5668;">CSS &#x9009;&#x62E9;&#x5668;</h1>
+<p>&#x9009;&#x62E9;&#x5668;&#x662F;CSS&#x6700;&#x5148;&#x5F15;&#x5165;&#x7684;&#x4E00;&#x4E2A;&#x673A;&#x5236;&#xFF08;&#x4F46;&#x662F;&#x968F;&#x7740;document.querySelector&#x7B49;API&#x7684;&#x52A0;&#x5165;&#xFF0C;&#x9009;&#x62E9;&#x5668;&#x5DF2;&#x7ECF;&#x4E0D;&#x4EC5;&#x4EC5;&#x662F;CSS&#x7684;&#x4E00;&#x90E8;&#x5206;&#x4E86;&#xFF09;</p>
+<h3 id="&#x57FA;&#x7840;">&#x57FA;&#x7840;</h3>
+<p>&#x57FA;&#x672C;&#x610F;&#x4E49;&#xFF1A; &#x6839;&#x636E;&#x4E00;&#x4E9B;&#x7279;&#x5F81;&#xFF0C;&#x9009;&#x4E2D;&#x5143;&#x7D20;&#x6811;&#x4E0A;&#x7684;&#x4E00;&#x6279;&#x5143;&#x7D20;</p>
+<p>&#x9009;&#x62E9;&#x5668;&#x7ED3;&#x6784;&#x5206;&#x7C7B;&#xFF1A;</p>
 <ul>
-<li>@color-profile&#xFF1A;&#x662F;SVG1.0&#x5F15;&#x5165;&#x7684;CSS&#x7279;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x73B0;&#x72B6;&#x51B5;&#x4E0D;&#x600E;&#x4E48;&#x597D;</li>
-<li>@document&#xFF1A;&#x8FD8;&#x6CA1;&#x8BA8;&#x8BBA;&#x6E05;&#x695A;&#xFF0C;&#x88AB;&#x63A8;&#x8FDF;&#x5230;&#x4E86;CSS4&#x4E2D;</li>
-<li>@font-feature-values&#xFF1A;. . .</li>
+<li>&#x7B80;&#x5355;&#x9009;&#x62E9;&#x5668;&#xFF1A;&#x9488;&#x5BF9;&#x67D0;&#x4E00;&#x7279;&#x5F81;&#x5224;&#x65AD;&#x662F;&#x5426;&#x9009;&#x4E2D;&#x5143;&#x7D20;</li>
+<li>&#x590D;&#x5408;&#x9009;&#x62E9;&#x5668;&#xFF1A;&#x8FDE;&#x7EED;&#x5199;&#x5728;&#x4E00;&#x8D77;&#x7684;&#x7B80;&#x5355;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x9488;&#x5BF9;&#x5143;&#x7D20;&#x81EA;&#x8EAB;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x5355;&#x4E2A;&#x5143;&#x7D20;</li>
+<li>&#x590D;&#x6742;&#x9009;&#x62E9;&#x5668;&#xFF1A;&#x7531;&#x7A7A;&#x683C;&#x3001;&gt;&#x3001;&#xFF5E;&#x3001;+&#x3001;||&#x7B49;&#x7B26;&#x53F7;&#x94FE;&#x63A5;&#x7684;&#x590D;&#x5408;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x6839;&#x636E;&#x7236;&#x5143;&#x7D20;&#x6216;&#x8005;&#x524D;&#x5E8F;&#x5143;&#x7D20;&#x68C0;&#x67E5;&#x5355;&#x4E2A;&#x5143;&#x7D20;</li>
+<li>&#x9009;&#x62E9;&#x5668;&#x5217;&#x8868;&#xFF1A;&#x7531;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x590D;&#x6742;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x8868;&#x793A;&#x201C;&#x6216;&#x201D;&#x7684;&#x5173;&#x7CFB;</li>
 </ul>
-<h3 id="&#x666E;&#x901A;&#x89C4;&#x5219;">&#x666E;&#x901A;&#x89C4;&#x5219;</h3>
-<p>&#x4E3B;&#x8981;&#x7531;&#x9009;&#x62E9;&#x5668;&#x548C;&#x58F0;&#x660E;&#x533A;&#x5757;&#x6784;&#x6210;&#x3002;</p>
-<p>&#x58F0;&#x660E;&#x533A;&#x5757;&#xFF1A;&#x7531;&#x5C5E;&#x6027;&#x548C;&#x503C;&#x6784;&#x6210;</p>
-<h4 id="&#x9009;&#x62E9;&#x5668;">&#x9009;&#x62E9;&#x5668;</h4>
-<p>&#x6709;&#x4E00;&#x4EFD;&#x72EC;&#x7ACB;&#x7684;CSS&#x548C;HTML&#x5171;&#x7528;&#x7684;<a href="https://www.w3.org/TR/selectors-4/" target="_blank">&#x6807;&#x51C6;</a></p>
-<p>&#x4EFB;&#x4F55;&#x9009;&#x62E9;&#x5668;&#x90FD;&#x662F;&#x7531;&#x51E0;&#x4E2A;&#x7B26;&#x53F7;&#x7ED3;&#x6784;&#x8FDE;&#x63A5;&#x7684;&#xFF1A;&#x7A7A;&#x683C;&#x3001;&#x5927;&#x4E8E;&#x53F7;&#x3001;&#x52A0;&#x53F7;&#x3001;&#x6CE2;&#x6D6A;&#x7EBF;&#x3001;&#x53CC;&#x7AD6;&#x7EBF;</p>
+<h4 id="&#x4E00;&#x3001;&#x7B80;&#x5355;&#x9009;&#x62E9;&#x5668;">&#x4E00;&#x3001;&#x7B80;&#x5355;&#x9009;&#x62E9;&#x5668;</h4>
+<p>  <img src="../img/css/selector_simple.jpeg" alt="CSS&#x7B80;&#x5355;&#x9009;&#x62E9;&#x5668;"></p>
 <ul>
+<li><p>&#x7C7B;&#x578B;&#x9009;&#x62E9;&#x5668;&#x548C;&#x5168;&#x4F53;&#x9009;&#x62E9;&#x5668;</p>
+<ul>
+<li>&#x5168;&#x4F53;&#x9009;&#x62E9;&#x5668;&#xFF1A; *</li>
+<li><p>&#x7C7B;&#x578B;&#x9009;&#x62E9;&#x5668;&#xFF1A;&#x6839;&#x636E;&#x5143;&#x7D20;&#x7684;&#x6807;&#x7B7E;&#x540D;&#x6765;&#x9009;&#x4E2D;&#x5143;&#x7D20;</p>
+<ul>
+<li>&#x5FC5;&#x987B;&#x8003;&#x8651;html&#x6216;xml&#x7684;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#x95EE;&#x9898;
+```html<!-- html和svg中都有a元素，用带命名空间的类型选择器来区分 -->
+&lt;!DOCTYPE html&gt;<html>
+<head>
+<meta charset="utf-8">
+<title>JS Bin</title>
+</head>
+<body>
+<svg width="100" height="28" viewbox="0 0 100 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<desc>Example link01 - a link on an ellipse
+</desc>
+<a xlink:href="http://www.w3.org">
+  <text y="100%">name</text>
+</a>
+</svg>
+<br>
+<a href="">name</a>
+</body>
+</html>
+
+</li>
+</ul>
+<p>@namespace svg url(<a href="http://www.w3.org/2000/svg" target="_blank">http://www.w3.org/2000/svg</a>);
+@namespace html url(<a href="http://www.w3.org/1999/xhtml" target="_blank">http://www.w3.org/1999/xhtml</a>);
+svg|a {
+  stroke:blue;
+  stroke-width:1;
+}</p>
+<p>html|a {
+  font-size:40px
+}
+```</p>
+</li>
+</ul>
+</li>
+<li>id&#x9009;&#x62E9;&#x5668;&#x548C;class&#x9009;&#x62E9;&#x5668;&#xFF1A;&#x9488;&#x5BF9;&#x7279;&#x5B9A;&#x5C5E;&#x6027;<ul>
+<li>&#x6CE8;&#xFF1A;class&#x9009;&#x62E9;&#x5668;&#x8BC6;&#x522B;&#x7684;&#x662F; - &#x7528;&#x7A7A;&#x683C;&#x5206;&#x9694;&#x7684;class&#x8BED;&#x6CD5;</li>
+</ul>
+</li>
+<li>&#x5C5E;&#x6027;&#x9009;&#x62E9;&#x5668;&#xFF1A;&#x6839;&#x636E;HTML&#x5143;&#x7D20;&#x7684;&#x5C5E;&#x6027;&#x6765;&#x9009;&#x4E2D;&#x5143;&#x7D20;<ul>
+<li>&#x56DB;&#x79CD;&#x5F62;&#x6001;&#xFF1A;<ul>
+<li>[att]&#xFF1A;&#x76F4;&#x63A5;&#x5728;&#x65B9;&#x62EC;&#x53F7;&#x4E2D;&#x653E;&#x5165;&#x5C5E;&#x6027;&#x540D;&#xFF0C;&#x662F;&#x68C0;&#x67E5;&#x5143;&#x7D20;&#x662F;&#x5426;&#x5177;&#x6709;&#x8FD9;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x53EA;&#x8981;&#x6709;&#xFF0C;&#x4E0D;&#x8BBA;&#x4EC0;&#x4E48;&#x503C;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x88AB;&#x9009;&#x4E2D;</li>
+<li>[att=val]&#xFF1A;&#x7CBE;&#x786E;&#x5339;&#x914D;&#xFF0C;&#x68C0;&#x67E5;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x5426;&#x662F;val</li>
+<li>[att~=val]&#xFF1A;&#x591A;&#x79CD;&#x5339;&#x914D;&#xFF0C;&#x68C0;&#x67E5;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x82E5;&#x5E72;&#x503C;&#x4E4B;&#x4E00;&#xFF0C;&#x6B64;&#x5904;&#x7684;val&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x4E00;&#x503C;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x7528; <strong>&#x7A7A;&#x683C;</strong> &#x5206;&#x9694;&#x7684;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;</li>
+<li>[att|=val]&#xFF1A;&#x5F00;&#x5934;&#x5339;&#x914D;&#xFF0C;&#x68C0;&#x67E5;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x662F;&#x5426;&#x4EE5;val&#x5F00;&#x5934;</li>
+</ul>
+</li>
+<li><strong>&#x6709;&#x4E9B;HTML&#x5C5E;&#x6027;&#x6709;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x62EC;&#x53F7;&#x628A;val&#x62EC;&#x8D77;&#x6765;&#xFF0C;&#x5F62;&#x6210;&#x4E00;&#x4E2A;CSS&#x5B57;&#x7B26;&#x4E32;&#x3002;CSS&#x5B57;&#x7B26;&#x4E32;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x5F15;&#x53F7;&#x6765;&#x89C4;&#x907F;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x53CD;&#x659C;&#x6760;&#x8F6C;&#x4E49;</strong></li>
+</ul>
+</li>
+<li>&#x4F2A;&#x7C7B;&#x9009;&#x62E9;&#x5668;&#xFF1A;&#x4E00;&#x7CFB;&#x5217;&#x7531;CSS&#x89C4;&#x5B9A;&#x597D;&#x7684;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x4EE5;&#x5192;&#x53F7;&#x5F00;&#x5934;&#xFF0C;&#x6709;&#x666E;&#x901A;&#x7C7B;&#x578B;&#x548C;&#x51FD;&#x6570;&#x7C7B;&#x578B;&#x4E24;&#x79CD;
+&#x5EFA;&#x8BAE;&#x53EA;&#x5728;&#x4E0D;&#x5F97;&#x4E0D;&#x4F7F;&#x7528;&#x4F2A;&#x7C7B;&#x7684;&#x573A;&#x666F;&#x4F7F;&#x7528;&#x4F2A;&#x7C7B;&#xFF0C;&#x5BF9;&#x4E8E;CSS&#x4EE3;&#x7801;&#x7684;&#x6027;&#x80FD;&#x548C;&#x53EF;&#x8BFB;&#x6027;&#x90FD;&#x6709;&#x597D;&#x5904;<ul>
+<li>&#x6811;&#x7ED3;&#x6784;&#x5173;&#x7CFB;&#x4F2A;&#x7C7B;&#x9009;&#x62E9;&#x5668;<ul>
+<li>:root &#x8868;&#x793A;&#x6811;&#x7684;&#x6839;&#x5143;&#x7D20;&#x3002;&#x9488;&#x5BF9;&#x5B8C;&#x6574;&#x7684;html&#x6587;&#x6863;&#x60C5;&#x51B5;&#xFF0C;&#x4E00;&#x822C;&#x7528;html&#x6807;&#x7B7E;&#x5373;&#x53EF;&#x9009;&#x4E2D;&#xFF1B;&#x4F46;&#x5728;scoped css&#x548C;shadow root&#x7B49;&#x573A;&#x666F;&#x4E2D;&#xFF0C;&#x9009;&#x62E9;&#x5668;&#x53EF;&#x4EE5;&#x9488;&#x5BF9;&#x67D0;&#x4E00;&#x5B50;&#x6811;&#x6765;&#x9009;&#x62E9;</li>
+<li>:empty &#x8868;&#x793A;&#x6CA1;&#x6709;&#x5B50;&#x8282;&#x70B9;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x4F8B;&#x5916;&#xFF1A;&#x5B50;&#x8282;&#x70B9;&#x4E3A;&#x7A7A;&#x767D;&#x6587;&#x672C;&#x8282;&#x70B9;&#x7684;&#x60C5;&#x51B5;</li>
+<li>:nth-child &#x548C; :nth-last-child &#x8FD9;&#x662F;&#x51FD;&#x6570;&#x578B;&#x7684;&#x4F2A;&#x7C7B;&#xFF0C;&#x540E;&#x8005;&#x662F;&#x4ECE;&#x540E;&#x5F80;&#x524D;&#x6570;&#xFF0C;CSS&#x7684; An+B &#x8BED;&#x6CD5;&#x8BBE;&#x8BA1;&#x7684;&#x662F;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x7684;&#xFF0C;eg:<ul>
+<li>:nth-child(even) &#x9009;&#x4E2D;&#x5076;&#x6570;&#x8282;&#x70B9;</li>
+<li>:nth-child(4n-1) &#x9009;&#x4E2D;&#x7B2C;3&#x4E2A;&#x3001;&#x7B2C;7&#x4E2A;&#x3001;&#x7B2C;11&#x4E2A;&#x3002;&#x3002;&#x3002;</li>
+<li>:nth-child(3n+1 of li.important) &#x9009;&#x4E2D;&#x7B2C;1&#x4E2A;&#x3001;&#x7B2C;4&#x4E2A;&#x3001;&#x7B2C;7&#x4E2A;li.important(&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x53EA;&#x6709;li.important&#x4F1A;&#x88AB;&#x8BA1;&#x6570;)</li>
+</ul>
+</li>
+<li>:first-child :last-child&#x5206;&#x522B;&#x8868;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x548C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</li>
+<li>:only-child &#x9009;&#x4E2D;&#x552F;&#x4E00;&#x4E00;&#x4E2A;&#x5B50;&#x5143;&#x7D20;</li>
+<li>of-type&#x7CFB;&#x5217; &#x662F;&#x4E00;&#x4E2A;&#x53D8;&#x5F62;&#x7684;&#x8BED;&#x6CD5;&#x7CD6;&#xFF0C;S:nth-of-type(An+B) &#x662F; :nth-of-type(|An+B| of S)&#x7684;&#x53E6;&#x4E00;&#x79CD;&#x5199;&#x6CD5;</li>
+<li>nth-last-of-type&#x3001;first-of-type&#x3001;last-of-type&#x3001;only-of-type</li>
+</ul>
+</li>
+<li>&#x94FE;&#x63A5;&#x4E0E;&#x884C;&#x4E3A;&#x4F2A;&#x7C7B;&#x9009;&#x62E9;&#x5668;&#xFF1A;&#x662F;&#x7B2C;&#x4E00;&#x6279;&#x8BBE;&#x8BA1;&#x51FA;&#x6765;&#x7684;&#x4F2A;&#x7C7B;&#xFF0C;&#x4E5F;&#x662F;&#x6700;&#x5E38;&#x7528;&#x7684;&#x4E00;&#x6279;<ul>
+<li>:any-link &#x8868;&#x793A;&#x4EFB;&#x610F;&#x7684;&#x94FE;&#x63A5;&#xFF0C;&#x5305;&#x62EC;a&#x3001;area&#x3001;link&#x90FD;&#x53EF;&#x80FD;&#x5339;&#x914D;&#x5230;&#x8FD9;&#x4E2A;&#x4F2A;&#x7C7B;</li>
+<li>:link &#x8868;&#x793A;&#x672A;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x94FE;&#x63A5;&#xFF0C;:visited &#x8868;&#x793A;&#x5DF2;&#x7ECF;&#x8BBF;&#x95EE;&#x8FC7;&#x7684;&#x94FE;&#x63A5;</li>
+<li>:hover &#x8868;&#x793A;&#x9F20;&#x6807;&#x60AC;&#x505C;&#x5728;&#x4E0A;&#x7684;&#x5143;&#x7D20;</li>
+<li>:active &#x8868;&#x793A;&#x7528;&#x6237;&#x6B63;&#x5728;&#x6FC0;&#x6D3B;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x3002;&#x5982;&#x679C;&#x7528;&#x6237;&#x6309;&#x4E0B;&#x6309;&#x94AE;&#xFF0C;&#x9F20;&#x6807;&#x8FD8;&#x672A;&#x62AC;&#x8D77;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6309;&#x94AE;&#x5C31;&#x5904;&#x4E8E;&#x6FC0;&#x6D3B;&#x72B6;&#x6001;</li>
+<li>:focus &#x8868;&#x793A;&#x7126;&#x70B9;&#x843D;&#x5728;&#x8FD9;&#x4E2A;&#x5143;&#x7D20;&#x4E0A;</li>
+<li>:target &#x7528;&#x4E8E;&#x9009;&#x4E2D;&#x6D4F;&#x89C8;&#x5668;URL&#x7684;hash&#x90E8;&#x5206;&#x6240;&#x6307;&#x7684;&#x5143;&#x7D20;</li>
+</ul>
+</li>
+<li>&#x903B;&#x8F91;&#x4F2A;&#x7C7B;&#x9009;&#x62E9;&#x5668;<ul>
+<li>:not &#x51FD;&#x6570;&#x578B;&#x4F2A;&#x7C7B;</li>
+</ul>
+</li>
+<li>&#x5176;&#x5B83;&#x4F2A;&#x7C7B;&#x9009;&#x62E9;&#x5668;<ul>
+<li>&#x56FD;&#x9645;&#x5316;/&#x591A;&#x8BED;&#x8A00;&#xFF1A;dir&#x3001;lang</li>
+<li>&#x97F3;/&#x89C6;&#x9891;&#xFF1A;paly&#x3001;pause &#x7528;&#x4E8E;&#x533A;&#x5206;&#x97F3;&#x89C6;&#x9891;&#x64AD;&#x653E;&#x72B6;&#x6001;</li>
+<li>&#x65F6;&#x5E8F;&#xFF1A;current&#x3001;past&#x3001;future &#x7528;&#x4E8E;&#x914D;&#x5408;&#x8BFB;&#x5C4F;&#x8F6F;&#x4EF6;&#x7B49;&#x65F6;&#x5E8F;&#x6027;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x4F2A;&#x7C7B;</li>
+<li>&#x8868;&#x683C;&#xFF1A;nth-col&#x3001;nth-last-col &#x7528;&#x4E8E;&#x5904;&#x7406;table&#x7684;&#x5217;&#x7684;&#x4F2A;&#x7C7B;</li>
+</ul>
+</li>
+<li>Selector Level 4&#x8349;&#x6848;&#xFF1A;target-within&#x3001;focus-within&#x7B49;&#xFF0C;&#x8868;&#x793A;&#x7236;&#x5BB9;&#x5668;&#xFF1B;:is&#x3001;:where&#x3001;:has&#x7B49;&#xFF1B;&#xFF08;&#x4F46;&#x662F;&#x6709;&#x4E9B;&#x8FDD;&#x80CC;&#x4E86; <strong>&#x9009;&#x62E9;&#x5668;&#x5339;&#x914D;DOM&#x6811;&#x4E0D;&#x56DE;&#x6EAF;&#x7684;&#x539F;&#x5219;</strong> &#xFF0C;&#x547D;&#x8FD0;&#x672A;&#x77E5;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x4E8C;&#x3001;&#x9009;&#x62E9;&#x5668;&#x7684;&#x7EC4;&#x5408;">&#x4E8C;&#x3001;&#x9009;&#x62E9;&#x5668;&#x7684;&#x7EC4;&#x5408;</h4>
+<p>  &#x9009;&#x62E9;&#x5668;&#x7EC4;&#x5408;&#x662F;&#x4E00;&#x4E2A;&#x9009;&#x62E9;&#x5668;&#x5217;&#x8868;&#xFF0C;</p>
+<p>  &#x9009;&#x62E9;&#x5668;&#x5217;&#x8868;&#x662F;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#x7684;&#x590D;&#x6742;&#x9009;&#x62E9;&#x5668;&#x5E8F;&#x5217;&#xFF1B;</p>
+<p>  &#x590D;&#x6742;&#x9009;&#x62E9;&#x5668;&#x5E8F;&#x5217;&#x662F;&#x7528;&#x7A7A;&#x683C;&#x3001;&#x5927;&#x4E8E;&#x53F7;&#x3001;&#x6CE2;&#x6D6A;&#x7EBF;&#x7B49;&#x7B26;&#x53F7;&#x94FE;&#x63A5;&#x7684;&#x590D;&#x5408;&#x9009;&#x62E9;&#x5668;&#xFF1B;</p>
+<p>  &#x590D;&#x5408;&#x9009;&#x62E9;&#x5668;&#x662F;&#x8FDE;&#x5199;&#x7684;&#x7B80;&#x5355;&#x9009;&#x62E9;&#x5668;&#x7EC4;&#x5408;</p>
+<ul>
+<li>&#x9009;&#x62E9;&#x5668;&#x7684;&#x8FDE;&#x63A5;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x50CF;&#x56DB;&#x5219;&#x8FD0;&#x7B97;&#x4E00;&#x6837;&#x6709;&#x4F18;&#x5148;&#x7EA7;<ul>
+<li>&#x7B2C;&#x4E00;&#x4F18;&#x5148;&#x7EA7;&#xFF1A;&#x65E0;&#x8FDE;&#x63A5;&#x7B26;&#x53F7;</li>
+<li>&#x7B2C;&#x4E8C;&#x4F18;&#x5148;&#x7EA7;&#xFF1A;&#x7A7A;&#x683C;&#x3001;&#xFF5E;&#x3001;+&#x3001;&gt;&#x3001;||</li>
+<li>&#x7B2C;&#x4E09;&#x4F18;&#x5148;&#x7EA7;&#xFF1A;&#x9017;&#x53F7;</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>&#x590D;&#x5408;&#x9009;&#x62E9;&#x5668;&#x662F;&#x4E14;&#x7684;&#x5173;&#x7CFB;</p>
+</li>
+<li><p>&#x590D;&#x6742;&#x9009;&#x62E9;&#x5668;&#xFF1A;&#x9488;&#x5BF9;&#x8282;&#x70B9;&#x5173;&#x7CFB;&#x7684;&#x9009;&#x62E9;&#xFF0C;&#x89C4;&#x5B9A;&#x4E86;&#x4E94;&#x79CD;&#x8FDE;&#x63A5;&#x7B26;&#x53F7;&#xFF1A;&#xFF08;&#x5B9E;&#x8DF5;&#x4E2D;&#x4E00;&#x822C;&#x91C7;&#x7528;&#x5408;&#x7406;&#x8BBE;&#x7F6E;class&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x8FC7;&#x4E8E;&#x590D;&#x6742;&#x7684;&#x9009;&#x62E9;&#x5668;&#x7ED3;&#x6784;&#xFF0C;&#x6709;&#x5229;&#x4E8E;&#x7EF4;&#x62A4;&#x548C;&#x6027;&#x80FD;&#xFF09;</p>
+<ul>
+<li>&#x7A7A;&#x683C;&#xFF1A;&#x540E;&#x4EE3;&#xFF0C;&#x8868;&#x793A;&#x9009;&#x4E2D;&#x6240;&#x6709;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x540E;&#x4EE3;&#x8282;&#x70B9;</li>
 <li><blockquote>
-<p>&#xFF1A;&#x5B50;&#x4EE3;&#x9009;&#x62E9;&#x5668;</p>
+<p>&#xFF1A;&#x5B50;&#x4EE3;&#xFF0C;&#x8868;&#x793A;&#x9009;&#x4E2D;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5B50;&#x8282;&#x70B9;</p>
 </blockquote>
 </li>
-<li>&#xFF5E; &#xFF1A; &#x540E;&#x7EE7;&#x9009;&#x62E9;&#x5668; &#xFF08;&#x53EA;&#x4F5C;&#x7528;&#x4E00;&#x5C42;&#xFF09;</li>
+<li>&#xFF5E;&#xFF1A;&#x540E;&#x7EE7;&#xFF0C;&#x8868;&#x793A;&#x9009;&#x4E2D;&#x6240;&#x6709;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x540E;&#x7EE7;&#x8282;&#x70B9; &#xFF08;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#xFF1A;&#x8DDF;&#x5F53;&#x524D;&#x8282;&#x70B9;&#x5177;&#x6709;&#x540C;&#x4E00;&#x4E2A;&#x7236;&#x5143;&#x7D20;&#xFF0C;&#x5E76;&#x51FA;&#x73B0;&#x5728;&#x5B83;&#x4E4B;&#x540E;&#x7684;&#x8282;&#x70B9;&#xFF09;</li>
+<li>+&#xFF1A;&#x76F4;&#x63A5;&#x540E;&#x7EE7;&#xFF0C;&#x8868;&#x793A;&#x9009;&#x4E2D;&#x7B26;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x76F4;&#x63A5;&#x540E;&#x7EE7;&#x8282;&#x70B9; &#xFF08;&#x76F4;&#x63A5;&#x540E;&#x7EE7;&#x8282;&#x70B9;&#xFF1A;&#x5373;nextSibling&#xFF09;</li>
+<li>||&#xFF1A;&#x5217;&#x9009;&#x62E9;&#x5668;&#xFF0C;&#x8868;&#x793A;&#x9009;&#x4E2D;&#x5BF9;&#x5E94;&#x5217;&#x4E2D;&#x590D;&#x5408;&#x6761;&#x4EF6;&#x7684;&#x5355;&#x5143;&#x683C;</li>
+</ul>
+</li>
+<li><p>&#x4F2A;&#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668;&#x89C1;&#x1F447;</p>
+</li>
+</ol>
+<h4 id="&#x4E09;&#x3001;&#x9009;&#x62E9;&#x5668;&#x7684;&#x4F18;&#x5148;&#x7EA7;">&#x4E09;&#x3001;&#x9009;&#x62E9;&#x5668;&#x7684;&#x4F18;&#x5148;&#x7EA7;</h4>
+<ul>
+<li>CSS&#x6807;&#x51C6;&#x7528;&#x4E00;&#x4E2A;&#x4E09;&#x5143;&#x7EC4;&#xFF08;a&#x3001;b&#x3001;c&#xFF09;&#x6765;&#x6784;&#x6210;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x9009;&#x62E9;&#x5668;&#x7684;&#x4F18;&#x5148;&#x7EA7;<ul>
+<li>id&#x9009;&#x62E9;&#x5668;&#x7684;&#x6570;&#x76EE;&#x8BB0;&#x4E3A;a</li>
+<li>&#x4F2A;&#x7C7B;&#x9009;&#x62E9;&#x5668;&#x548C;class&#x9009;&#x62E9;&#x5668;&#x6570;&#x76EE;&#x8BB0;&#x4E3A;b</li>
+<li>&#x4F2A;&#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668;&#x548C;&#x6807;&#x7B7E;&#x9009;&#x62E9;&#x5668;&#x6570;&#x76EE;&#x8BB0;&#x4E3A;c</li>
 <li><ul>
-<li>&#xFF1A;&#x76F4;&#x63A5;&#x540E;&#x7EE7;&#x9009;&#x62E9;&#x5668;</li>
+<li>&#x4E0D;&#x5F71;&#x54CD;&#x4F18;&#x5148;&#x7EA7;</li>
 </ul>
 </li>
-<li>|| &#xFF1A;&#x9009;&#x4E2D;&#x8868;&#x683C;&#x4E2D;&#x7684;&#x4E00;&#x5217;</li>
 </ul>
-<h4 id="&#x58F0;&#x660E;&#xFF1A;&#x5C5E;&#x6027;&#x548C;&#x503C;">&#x58F0;&#x660E;&#xFF1A;&#x5C5E;&#x6027;&#x548C;&#x503C;</h4>
-<p>&#x5C5E;&#x6027;&#x662F;&#x7531;&#x4E2D;&#x5212;&#x7EBF;&#x3001;&#x4E0B;&#x5212;&#x7EBF;&#x3001;&#x5B57;&#x6BCD;&#x7B49;&#x7EC4;&#x6210;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;CSS&#x8FD8;&#x652F;&#x6301;&#x7528;&#x53CD;&#x659C;&#x6760;&#x8F6C;&#x79FB;&#x3002;&#xFF08;&#x5C5E;&#x6027;&#x4E0D;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x8FDE;&#x7EED;&#x7684;&#x4E24;&#x4E2A;&#x4E2D;&#x5212;&#x7EBF;&#x5F00;&#x5934;&#xFF0C;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;CSS&#x53D8;&#x91CF;&#xFF09;</p>
-<p>&#x5728;<a href="https://www.w3.org/TR/css-variables/" target="_blank">CSS Variables</a>&#x6807;&#x51C6;&#x4E2D;&#xFF0C;&#x4EE5;&#x53CC;&#x4E2D;&#x5212;&#x7EBF;&#x5F00;&#x5934;&#x7684;&#x5C5E;&#x6027;&#x88AB;&#x5F53;&#x4F5C;&#x53D8;&#x91CF;&#xFF0C;&#x4E0E;&#x4E4B;&#x914D;&#x5408;&#x7684;&#x662F;var&#x51FD;&#x6570;</p>
-<pre><code class="lang-css"><span class="hljs-selector-pseudo">:root</span> {
-  <span class="hljs-attribute">--main-color</span>: <span class="hljs-number">#06c</span>;
-  <span class="hljs-attribute">--accent-color</span>: <span class="hljs-number">#006</span>;
-}
-
-# <span class="hljs-selector-tag">foo</span> <span class="hljs-selector-tag">h1</span> {
-  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--main-color);
-}
-</code></pre>
-<p>&#x503C;&#x7684;&#x6807;&#x51C6;&#xFF1A;<a href="https://www.w3.org/TR/css-values-4/" target="_blank">CSS Values and Unit</a>&#xFF0C;&#x503C;&#x7684;&#x7C7B;&#x578B;&#xFF1A;</p>
+</li>
+<li>CSS&#x6807;&#x51C6;&#x5EFA;&#x8BAE;&#x7528;&#x4E00;&#x4E2A;&#x8DB3;&#x591F;&#x5927;&#x7684;&#x8FDB;&#x5236;&#xFF0C;&#x83B7;&#x53D6;&#x201C;a-b-c&#x201D;&#x6765;&#x8868;&#x793A;&#x9009;&#x62E9;&#x5668;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x5373; <code>specificity = base * base * a + base * b + c</code> &#xFF0C;base&#x662F;&#x4E00;&#x4E2A;&#x8DB3;&#x591F;&#x5927;&#x7684;&#x6B63;&#x6574;&#x6570;</li>
+<li>&#x884C;&#x5185;&#x5C5E;&#x6027;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x6C38;&#x8FDC;&#x9AD8;&#x4E8E;CSS&#x89C4;&#x5219;</li>
+<li>!important &#x7528;&#x6CD5;&#x975E;&#x5E38;&#x5371;&#x9669;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x5E76;&#x4E14;&#x9AD8;&#x4E8E;&#x884C;&#x5185;&#x5C5E;&#x6027;</li>
+<li>&#x540C;&#x4E00;&#x4F18;&#x5148;&#x7EA7;&#xFF1A;&#x9075;&#x5FAA;&#x201C;&#x540E;&#x9762;&#x7684;&#x8986;&#x76D6;&#x524D;&#x9762;&#x7684;&#x201D;&#x539F;&#x5219;</li>
+<li>&#x6CE8;&#xFF1A;&#x9009;&#x62E9;&#x5668;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x662F;&#x9488;&#x5BF9;&#x590D;&#x6742;&#x9009;&#x62E9;&#x5668;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x9009;&#x62E9;&#x5668;&#x5217;&#x8868;&#x4E0D;&#x4F1A;&#x5408;&#x5E76;&#x8BA1;&#x7B97;&#x4F18;&#x5148;&#x7EA7;</li>
+</ul>
+<p>&#x5B9E;&#x8DF5;&#x5EFA;&#x8BAE;&#xFF1A; &#x4E0D;&#x8981;&#x7528;&#x8FC7;&#x4E8E;&#x590D;&#x6742;&#x7684;&#x9009;&#x62E9;&#x5668;</p>
 <ul>
-<li>CSS&#x8303;&#x56F4;&#x7684;&#x5173;&#x952E;&#x5B57;&#xFF1A;initial&#xFF0C;unset&#xFF0C;inherit&#xFF0C;&#x4EFB;&#x4F55;&#x5C5E;&#x6027;&#x90FD;&#x53EF;&#x4EE5;&#x7684;&#x5173;&#x952E;&#x5B57;</li>
-<li>&#x5B57;&#x7B26;&#x4E32;</li>
-<li>URL&#xFF1A;&#x4F7F;&#x7528;url()&#x51FD;&#x6570;&#x7684;URL&#x503C;</li>
-<li>&#x6574;&#x6570;/&#x5B9E;&#x6570;&#xFF1A;&#x5982;flex&#x5C5E;&#x6027;</li>
-<li>&#x7EF4;&#x5EA6;&#xFF1A;&#x5355;&#x4F4D;&#x7684;&#x6574;&#x6570;/&#x5B9E;&#x6570;&#xFF0C;&#x5982;width&#x5C5E;&#x6027;</li>
-<li>&#x767E;&#x5206;&#x6BD4;</li>
-<li>&#x989C;&#x8272;</li>
-<li>&#x56FE;&#x7247;</li>
-<li>2D&#x4F4D;&#x7F6E;</li>
-<li>&#x51FD;&#x6570;&#xFF1A;&#x5982;transform&#x5C5E;&#x6027;</li>
+<li>&#x6839;&#x636E;id&#x9009;&#x5355;&#x4E2A;&#x5143;&#x7D20;</li>
+<li>class&#x3001;class&#x7EC4;&#x5408;&#x9009;&#x6210;&#x7EC4;&#x5143;&#x7D20;</li>
+<li>tag&#x9009;&#x62E9;&#x53BB;&#x786E;&#x5B9A;&#x9875;&#x9762;&#x98CE;&#x683C;</li>
 </ul>
-<p>CSS&#x652F;&#x6301;&#x4E00;&#x6279;&#x7279;&#x5B9A;&#x7684;&#x8BA1;&#x7B97;&#x51FD;&#x6570;&#xFF1A;</p>
 <ul>
-<li>calc()&#xFF1A;&#x652F;&#x6301;&#x56DB;&#x5219;&#x8FD0;&#x7B97;&#x3002;&#x5728;&#x9488;&#x5BF9;&#x7EF4;&#x5EA6;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x65F6;&#xFF0C;&#x5141;&#x8BB8;&#x4E0D;&#x540C;&#x5355;&#x4F4D;&#x6DF7;&#x5408;&#x8FD0;&#x7B97;<pre><code class="lang-css"><span class="hljs-selector-tag">section</span> {
-<span class="hljs-attribute">float</span>: left;
-<span class="hljs-attribute">margin</span>: <span class="hljs-number">1em</span>; 
-<span class="hljs-attribute">border</span>: solid <span class="hljs-number">1px</span>;
-<span class="hljs-attribute">width</span>: <span class="hljs-built_in">calc</span>(100%/3 - 2*1em - 2*1px);
-}
+<li>&#x4F2A;&#x5143;&#x7D20;&#x9009;&#x62E9;&#x5668;&#xFF1A;&#x4E0D;&#x5355;&#x5355;&#x662F;&#x4E00;&#x79CD;&#x9009;&#x62E9;&#x89C4;&#x5219;&#xFF0C;&#x8FD8;&#x662F;&#x4E00;&#x79CD;&#x673A;&#x5236;<ul>
+<li>&#x8BED;&#x6CD5;&#x8DDF;&#x4F2A;&#x7C7B;&#x7C7B;&#x4F3C;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x6548;&#x679C;&#x5374;&#x662F;&#x628A;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5143;&#x7D20;&#x786C;&#x9009;&#x51FA;&#x6765;</li>
+<li>&#x76EE;&#x524D;&#x517C;&#x5BB9;&#x6027;&#x8FBE;&#x5230;&#x53EF;&#x7528;&#x7684;&#x4F2A;&#x5143;&#x7D20;&#xFF1A;::first-line&#x3001;::first-letter&#x3001;::before&#x3001;::after<ul>
+<li>::first-line&#x3001;::first-letter&#xFF1A;&#x5206;&#x522B;&#x8868;&#x793A;&#x5143;&#x7D20;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#xFF08;&#x6392;&#x7248;&#x540E;&#x663E;&#x793A;&#x7684;&#x7B2C;&#x4E00;&#x884C;&#xFF0C;&#x8DDF;HTML&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x6362;&#x884C;&#x65E0;&#x5173;&#xFF09;&#xFF0C;&#x5143;&#x7D20;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#xFF08;eg&#xFF1A;&#x9996;&#x5B57;&#x6BCD;&#x53D8;&#x5927;&#x5E76;&#x5411;&#x5DE6;&#x6D6E;&#x52A8;&#xFF09;<ul>
+<li>CSS&#x6807;&#x51C6;&#x89C4;&#x5B9A;&#x4E86;first-line&#x5FC5;&#x987B;&#x51FA;&#x73B0;&#x5728;&#x6700;&#x5185;&#x5C42;&#x7684;&#x5757;&#x7EA7;&#x5143;&#x7D20;&#x4E4B;&#x5185;<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">a</span>&gt;</span>First Paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Second Paragraph<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+div&gt;p#a { color: green; }
+div::first-line { color: blue; }
+<span class="hljs-comment">&lt;!-- &#x7ED3;&#x679C;&#x4E3A;&#x84DD;&#x8272; p&#x6362;&#x6210;span&#x4E3A;&#x7EFF;&#x8272;--&gt;</span>
 </code></pre>
 </li>
-<li><p>max()&#x3001;min()&#x548C;clamp()&#xFF1A;&#x6BD4;&#x8F83;&#x5927;&#x5C0F;</p>
+<li>first-letter&#x4F4D;&#x7F6E;&#x5728;&#x6240;&#x6709;&#x6807;&#x7B7E;&#x4E4B;&#x5185;</li>
+<li>CSS&#x53EA;&#x8981;&#x6C42;::first-line&#x3001;::first-letter&#x5B9E;&#x73B0;&#x6709;&#x9650;&#x7684;&#x51E0;&#x4E2A;CSS&#x5C5E;&#x6027;&#xFF1A;
+<img src="../img/css/wys_01.jpeg" alt="::first-line&#x3001;::first-letter&#x5B9E;&#x73B0;&#x6709;&#x9650;&#x7684;&#x51E0;&#x4E2A;CSS&#x5C5E;&#x6027;"></li>
+</ul>
 </li>
-<li><p>toggle()&#xFF1A;&#x5728;&#x89C4;&#x5219;&#x9009;&#x4E2D;&#x591A;&#x4E8E;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x65F6;&#x751F;&#x6548;&#xFF0C;&#x5B83;&#x4F1A;&#x5728;&#x51E0;&#x4E2A;&#x503C;&#x4E4B;&#x95F4;&#x6765;&#x56DE;&#x5207;&#x6362;&#x3002;eg&#xFF1A;&#x8BA9;&#x4E00;&#x4E2A;&#x7C7B;&#x6807;&#x9879;&#x7684;&#x6837;&#x5F0F;&#x5706;&#x70B9;&#x548C;&#x65B9;&#x70B9;&#x95F4;&#x9694;&#x51FA;&#x73B0;&#xFF1A;</p>
-<pre><code class="lang-css"><span class="hljs-selector-tag">ul</span> {
-<span class="hljs-attribute">list-style-type</span>: <span class="hljs-built_in">toggle</span>(circle, square)
-}
-</code></pre>
+<li>::before&#x3001;::after&#xFF1A;&#x4E0D;&#x662F;&#x5728;&#x5DF2;&#x6709;&#x7684;&#x5185;&#x5BB9;&#x4E0A;&#x5957;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x800C;&#x662F;&#x771F;&#x6B63;&#x7684;&#x65E0;&#x4E2D;&#x751F;&#x6709;&#xFF0C;&#x9020;&#x51FA;&#x4E00;&#x4E2A;&#x5143;&#x7D20;</li>
+</ul>
 </li>
-<li>attr()&#xFF1A;&#x5141;&#x8BB8;CSS&#x63A5;&#x6536;&#x5C5E;&#x6027;&#x503C;&#x7684;&#x63A7;&#x5236;</li>
+</ul>
+</li>
 </ul>
 
                                 
@@ -867,7 +966,7 @@ media query</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"css杂","level":"1.4.1","depth":2,"next":{"title":"JS","level":"1.5","depth":1,"path":"js/README.md","ref":"js/README.md","articles":[{"title":"points","level":"1.5.1","depth":2,"path":"js/points.md","ref":"js/points.md","articles":[]},{"title":"closure","level":"1.5.2","depth":2,"path":"js/closure.md","ref":"js/closure.md","articles":[]},{"title":"JavaScript 执行","level":"1.5.3","depth":2,"path":"js/runtime.md","ref":"js/runtime.md","articles":[]},{"title":"ES6","level":"1.5.4","depth":2,"path":"js/es6.md","ref":"js/es6.md","articles":[]},{"title":"Thread","level":"1.5.5","depth":2,"path":"js/thread.md","ref":"js/thread.md","articles":[]},{"title":"类型","level":"1.5.6","depth":2,"path":"js/type.md","ref":"js/type.md","articles":[]},{"title":"对象","level":"1.5.7","depth":2,"path":"js/object.md","ref":"js/object.md","articles":[]}]},"previous":{"title":"CSS","level":"1.4","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[{"title":"css杂","level":"1.4.1","depth":2,"path":"css/css.md","ref":"css/css.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["favicon","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"favicon":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"执着任性 不易相处","links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"css/css.md","mtime":"2019-03-06T10:07:46.993Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-20T09:20:00.802Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"css 选择器","level":"1.4.1","depth":2,"next":{"title":"JS","level":"1.5","depth":1,"path":"js/README.md","ref":"js/README.md","articles":[{"title":"points","level":"1.5.1","depth":2,"path":"js/points.md","ref":"js/points.md","articles":[]},{"title":"closure","level":"1.5.2","depth":2,"path":"js/closure.md","ref":"js/closure.md","articles":[]},{"title":"JavaScript 执行","level":"1.5.3","depth":2,"path":"js/runtime.md","ref":"js/runtime.md","articles":[]},{"title":"ES6","level":"1.5.4","depth":2,"path":"js/es6.md","ref":"js/es6.md","articles":[]},{"title":"Thread","level":"1.5.5","depth":2,"path":"js/thread.md","ref":"js/thread.md","articles":[]},{"title":"类型","level":"1.5.6","depth":2,"path":"js/type.md","ref":"js/type.md","articles":[]},{"title":"对象","level":"1.5.7","depth":2,"path":"js/object.md","ref":"js/object.md","articles":[]}]},"previous":{"title":"CSS","level":"1.4","depth":1,"path":"css/README.md","ref":"css/README.md","articles":[{"title":"css 选择器","level":"1.4.1","depth":2,"path":"css/css.md","ref":"css/css.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["favicon","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"favicon":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"执着任性 不易相处","links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"css/css.md","mtime":"2019-06-21T10:12:54.146Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-21T09:05:27.389Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
