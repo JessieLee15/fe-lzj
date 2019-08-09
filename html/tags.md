@@ -140,4 +140,79 @@
 * 浏览器的“阅读模式”
 
 
-## 
+
+## 有关链接的标签
+
+HTML中有两种类型： 超链接型标签、外部资源链接
+![链接](../img/css/wys_01.jpeg)
+
+### link标签 ：：： 也是元信息类的标签之一
+
+link 标签会生成一个链接，它可能生成超链接，也可能生成外部资源链接 其类型主要通过rel属性来区分
+  * 生成超链接：浏览器不产生任何作用；但是能够被搜索引擎和浏览器插件识别【RSS订阅】
+    * 超链接类：一种被动型链接（用户不操作，不会被主动下载）
+        * ref="canonical": 提示主URL【常给搜索引擎用】
+        * ref="alternate": 提示页面的变形形式【常给搜索引擎用】
+        * ref="pre"/ref="next": 很多网页都属于一个序列【分页、图片浏览】；
+        * 其他：表示一个跟当前文档相关联的信息，可以视为一种带功能连接的meta标签
+          * ref="author"：链接到本页面的作者，一般是mailto:协议
+          * ref="help"：链接到本页的帮助页
+          * ref="licence"：链接到本页的版权信息页
+          * ref="search"：链接到本页的搜索页（）一般是站内提供搜索时使用
+  * 引用外部资源：【引入样式表】；还可被放在body中（非元信息类）
+    * 外部资源型link：会被主动下载
+      * icon型link：唯一一个外部资源类的元信息link（其他都是超链接） 
+        * 如果没有指定此link，多数浏览器会使用域名根目录下的favicon.ico，即使他不存在
+        * HTML标准允许一个页面出现多个icon型link，并且用size指定他适合的icon尺寸【只有icon型link有有效的size属性】
+      * 预处理型link：允许我们控制刘安琪，提前针对一些资源去做一些操作以提高性能（DNS查询域名、建立连接、传输数据、加载进内存、渲染）
+        * dns-prefetch型link：提前对一个域名做DNS查询，这样的link里面的ref实际上只有域名有意义
+        * preconnect型link：提前对一个服务器建立tcp链接
+        * prefetch型link：提前取href指定的url内容
+        * preload型link：提前加载href指定的url
+        * prerender型link：提前渲染href指定的url
+      * modulepreload型link：预加载一个JavaScript模块【保证JS模块不必等到执行时才加载】；只是下载并加入内存，并不会执行对应的JavaScript
+      * stylesheet型link：最常见。
+        * 从一个CSS文件创建一个样式表。type属性可以没有，有则必须是"text/css"
+        * 可以rel="alternate stylesheet"，此时必须指定title属性：为页面创建一份变体样式【大部分浏览器不支持；Firefox3.0支持动浏览器菜单中切换这些样式】
+      * pingback型link：表示本网页被引用时，应该使用的pingback地址（这个机制是一份独立的标准，遵守pingback协议的网站在引用本页面时，会向pingback url发送一个消息）
+
+### a 标签【anchor 锚点】
+
+同时充当了链接和目标点的角色（有href属性-链接【被动型】；有name属性-链接的目标）
+  * a标签也可以有ref属性
+    * 与link相同的：alternate、author、help、license、next、prev、search
+      * 跟link语义完全一致
+      * a标签产生的链接会实际显示在网页中，link标签仅仅是元信息
+    * a标签独有的rel类型：
+      * tag：本网页所属的标签
+      * bookmark：到上级章节的链接
+    * 一些辅助的rel类型，提示浏览器或搜索引擎做一些处理
+      * nofollow： 此链接不会被搜索引擎索引
+      * noopener：此链接打开的网页无法使用opener来获得当前页面的窗口【window.opener=null】
+      * noreferrer：此链接打开的网页无法使用referrer来获得当前页面的url
+      * opener：此链接打开的网页可以使用opener来获得当前页面的window对象，这是a标签的默认行为
+
+### area 标签：：：与a标签相似；但不是文本类型的链接，而是区域型的链接；支持的rel与a完全一样
+    
+area 标签是整个html规则中唯一支持非矩形热区的标签
+  * 其shape属性支持三种类型：
+    * 原形 ：circle/circ，coords支持三个值：中心点的x,y坐标和半径r
+    * 矩形：rect/rectangle，coords支持两个值：两个对角顶点x1,y1和x2,y2  ？？？
+    * 多边形： poly/polygon，coords至少包括6个值：表示多边形的各个顶点
+  * 不支持曲线路径
+  * area必须跟img和map标签配合使用，eg:
+  ```html
+    <p>
+      Please select a shape:
+      <img src="shapes.png" usemap="#shapes"
+            alt="Four shapes are available: a red hollow box, a green circle, a blue triangle, and a yellow four-pointed star.">
+      <map name="shapes">
+        <area shape=rect coords="50,50,100,100"> <!-- the hole in the red box -->
+        <area shape=rect coords="25,25,125,125" href="red.html" alt="Red box.">
+        <area shape=circle coords="200,75,50" href="green.html" alt="Green circle.">
+        <area shape=poly coords="325,25,262,125,388,125" href="blue.html" alt="Blue triangle.">
+        <area shape=poly coords="450,25,435,60,400,75,435,90,450,125,465,90,500,75,465,60"
+              href="yellow.html" alt="Yellow star.">
+      </map>
+    </p >
+  ```

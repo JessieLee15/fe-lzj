@@ -150,7 +150,9 @@
       * first-letter位置在所有标签之内
       * CSS只要求::first-line、::first-letter实现有限的几个CSS属性：
         ![::first-line、::first-letter实现有限的几个CSS属性](../img/css/wys_01.jpeg)
-    * ::before、::after：不是在已有的内容上套一个元素，而是真正的无中生有，造出一个元素
+    * ::before、::after：不是在已有的内容上套一个元素，而是真正的无中生有，造出一个元素 (在元素之前/之后插入一个虚拟元素)
+      * 这两个伪元素所在CSS规则必须指定content才能生效，content支持为counter
+      
 
 
 
