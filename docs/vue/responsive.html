@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>给孩子看的动画列表 · 执着任性 不易相处</title>
+        <title>Vue.响应式 · 执着任性 不易相处</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -58,8 +58,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../react/" />
     
-    <link rel="prev" href="sum.html" />
+    
+    <link rel="prev" href="api.html" />
     
 
     
@@ -171,6 +173,19 @@
             
                     
                     css 选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../css/flow-normal.html">
+            
+                <a href="../css/flow-normal.html">
+            
+                    
+                    css 排版-正常流
             
                 </a>
             
@@ -409,9 +424,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../vue/">
+        <li class="chapter " data-level="1.8" data-path="./">
             
-                <a href="../vue/">
+                <a href="./">
             
                     
                     Vue
@@ -423,12 +438,25 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="../vue/api.html">
+        <li class="chapter " data-level="1.8.1" data-path="api.html">
             
-                <a href="../vue/api.html">
+                <a href="api.html">
             
                     
                     Vue.API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.2" data-path="responsive.html">
+            
+                <a href="responsive.html">
+            
+                    
+                    Vue.响应式
             
                 </a>
             
@@ -597,6 +625,32 @@
             
         </li>
     
+        <li class="chapter " data-level="1.11.6" data-path="../other/electron.html">
+            
+                <a href="../other/electron.html">
+            
+                    
+                    Electron
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../other/saas.html">
+            
+                <a href="../other/saas.html">
+            
+                    
+                    Saas方案
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -641,9 +695,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.15" data-path="./">
+        <li class="chapter " data-level="1.15" data-path="../J/">
             
-                <a href="./">
+                <a href="../J/">
             
                     
                     LZJ
@@ -655,25 +709,12 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.15.1" data-path="sum.html">
+        <li class="chapter " data-level="1.15.1" data-path="../J/sum.html">
             
-                <a href="sum.html">
+                <a href="../J/sum.html">
             
                     
                     2018年终
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.15.2" data-path="cartoon.html">
-            
-                <a href="cartoon.html">
-            
-                    
-                    给孩子看的动画列表
             
                 </a>
             
@@ -716,7 +757,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >给孩子看的动画列表</a>
+        <a href=".." >Vue.响应式</a>
     </h1>
 </div>
 
@@ -731,11 +772,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7559;&#x7ED9;&#x6211;&#x7684;&#x5B69;&#x5B50;&#x770B;&#x7684;&#x52A8;&#x753B;&#x5217;&#x8868;">&#x7559;&#x7ED9;&#x6211;&#x7684;&#x5B69;&#x5B50;&#x770B;&#x7684;&#x52A8;&#x753B;&#x5217;&#x8868;</h1>
+                                <h1 id="vue&#x54CD;&#x5E94;&#x5F0F;">Vue.&#x54CD;&#x5E94;&#x5F0F;</h1>
+<h2 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h2>
+<h3 id="&#x77E5;&#x8BC6;&#x70B9;">&#x77E5;&#x8BC6;&#x70B9;</h3>
 <ul>
-<li>&#x5C0F;&#x864E;&#x8FD8;&#x4E61;</li>
-<li>&#x1F981;&#xFE0F;&#x738B;</li>
-<li></li>
+<li>&#x6570;&#x636E;&#x52AB;&#x6301;/&#x6570;&#x636E;&#x4EE3;&#x7406;</li>
+<li>&#x4F9D;&#x8D56;&#x6536;&#x96C6;</li>
+<li>&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;</li>
+</ul>
+<h3 id="&#x5B9E;&#x73B0;">&#x5B9E;&#x73B0;</h3>
+<h4 id="&#x6570;&#x636E;&#x52AB;&#x6301;&#x6570;&#x636E;&#x4EE3;&#x7406;">&#x6570;&#x636E;&#x52AB;&#x6301;/&#x6570;&#x636E;&#x4EE3;&#x7406;</h4>
+<ul>
+<li>Object.defineProperty<ul>
+<li>Vue&#x901A;&#x8FC7;&#x8BBE;&#x5B9A;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x7684;setter/getter&#x65B9;&#x6CD5;&#x76D1;&#x542C;&#x6570;&#x636E;&#x53D8;&#x5316;&#xFF08;&#x9012;&#x5F52;&#x6240;&#x6709;&#x5C5E;&#x6027;&#xFF09;&#xFF1A;getter-&#x6536;&#x96C6;&#x4F9D;&#x8D56;&#xFF1B;setter-&#x89C2;&#x5BDF;&#x6570;&#x636E;&#x53D8;&#x5316;</li>
+<li>&#x6CE8;&#xFF1A;<ul>
+<li>&#x65E0;&#x6CD5;&#x68C0;&#x6D4B;&#x5230;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;&#x7684;&#x6DFB;&#x52A0;&#x6216;&#x5220;&#x9664;</li>
+<li>Object.defineProperty&#x4E0D;&#x80FD;&#x76D1;&#x542C;&#x6570;&#x7EC4;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#x7684;&#x91CD;&#x5199;&#xFF08;&#x91CD;&#x5199;&#x540E;&#x8FD8;&#x662F;&#x6709;&#x95EE;&#x9898;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ES6&#x7684;Proxy<ul>
+<li>Proxy&#x7684;&#x4EE3;&#x7406;&#x662F;&#x9488;&#x5BF9;&#x6574;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x67D0;&#x4E2A;&#x5C5E;&#x6027;&#xFF0C;&#x4E14;&#x652F;&#x6301;&#x4EE3;&#x7406;&#x6570;&#x7EC4;&#x7684;&#x53D8;&#x5316;</li>
+<li>&#x517C;&#x5BB9;&#x6027;&#x4E0D;&#x592A;&#x597D;</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;">&#x53D1;&#x5E03;&#x8BA2;&#x9605;&#x6A21;&#x5F0F;</h4>
+<ul>
+<li>&#x8BA2;&#x9605;&#x8005; Dep : &#x7528;&#x6765;&#x6536;&#x96C6;&#x4F9D;&#x8D56;&#x3001;&#x5220;&#x9664;&#x4F9D;&#x8D56;&#x3001;&#x5411;&#x4F9D;&#x8D56;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7B49;&#xFF08;&#x4F9D;&#x8D56;&#xFF1A;watcher&#xFF09;</li>
+<li>Watcher : &#x8868;&#x793A;&#x89C2;&#x5BDF;&#x8BA2;&#x9605;&#x4F9D;&#x8D56;</li>
+<li>&#x4F9D;&#x8D56;&#x6536;&#x96C6;&#x7684;&#x76EE;&#x7684;&#x662F;&#x5C06;&#x8D2F;&#x5F7B;&#x7740;Watcher&#x5BF9;&#x8C61;&#x5B58;&#x653E;&#x5230;&#x5F53;&#x524D;&#x5FC5;&#x62A5;&#x4E2D;&#x7684;&#x8BA2;&#x9605;&#x8005;Dep&#x7684;subs&#x4E2D;</li>
 </ul>
 
                                 
@@ -764,10 +831,14 @@
 
             
                 
-                <a href="sum.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 2018年终">
+                <a href="api.html" class="navigation navigation-prev " aria-label="Previous page: Vue.API">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="../react/" class="navigation navigation-next " aria-label="Next page: React">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -776,7 +847,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"给孩子看的动画列表","level":"1.15.2","depth":2,"previous":{"title":"2018年终","level":"1.15.1","depth":2,"path":"J/sum.md","ref":"J/sum.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"favicon":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"执着任性 不易相处","links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"J/cartoon.md","mtime":"2018-07-03T03:35:56.217Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-06-21T09:05:27.389Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Vue.响应式","level":"1.8.2","depth":2,"next":{"title":"React","level":"1.9","depth":1,"path":"react/README.md","ref":"react/README.md","articles":[{"title":"入门学习笔记","level":"1.9.1","depth":2,"path":"react/note.md","ref":"react/note.md","articles":[]}]},"previous":{"title":"Vue.API","level":"1.8.1","depth":2,"path":"vue/api.md","ref":"vue/api.md","articles":[]},"dir":"ltr"},"config":{"plugins":["favicon"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"favicon":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"执着任性 不易相处","links":{"gitbook":false,"sharing":{"google":false,"facebook":false,"twitter":false,"all":false}},"gitbook":"*"},"file":{"path":"vue/responsive.md","mtime":"2019-08-06T08:55:50.465Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-12T04:05:25.329Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -784,10 +855,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
