@@ -44,5 +44,4 @@
 * [About Gitbook](GITBOOK.md)
 * [LZJ](J/README.md)
     * [2018年终](J/sum.md)
-    * [给孩子看的动画列表](J/cartoon.md)
 
