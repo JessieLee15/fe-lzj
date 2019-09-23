@@ -216,3 +216,77 @@ area 标签是整个html规则中唯一支持非矩形热区的标签
       </map>
     </p >
   ```
+
+
+## 替换型元素标签
+
+替换型元素：使用src来引用文件
+
+### script标签
+既可以作为替换型标签，又可以不作为替换型标签
+
+### img标签
+
+只作为非替换型标签，一般要有src属性才有意义，其他属性：
+* data uri：作为图片的src
+  ```html 
+    <img src='data:image/svg+xml;charset=utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg"><rect width="300" height="100" style="fill:rgb(0,0,255);stroke-width:1;stroke:rgb(0,0,0)"/></svg>'/>
+  ```
+* width/height：指定宽高。注：只指定其一：图片被等比缩放。【从性能考虑，建议同时设置，替换型元素加载完文件后，如果尺寸改变，会触发重排版】
+* alt：对于视障用户非常重要
+* srcset和sizes：是src属性的升级版-在不同屏幕大和特性下，使用不同的图片源。其实更好的做法：使用picture元素
+  ```html
+  <img srcset="elva-fairy-320w.jpg 320w,
+             elva-fairy-480w.jpg 480w,
+             elva-fairy-800w.jpg 800w"
+     sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            800px"
+     src="elva-fairy-800w.jpg" alt="Elva dressed as a fairy">
+  ```
+### picture标签
+
+可以根据屏幕条件为其中的img提供不同的源：
+  ``` html
+  <picture>
+    <source srcset="image-wide.png" media="(min-width: 600px)">
+    <img src="image-narrow.png">
+  </picture>
+  ```
+* 其设计跟audio和video保持一致
+* 使用source元素支持图片源，可以设置多个
+* media属性：media query，同css的@media
+
+### video标签
+
+H5早期设计中，同img类似，使用src属性引入源文件。【浏览器对视频的编码格式兼容问题】现在同picture一样，提倡使用source
+  ```html
+  <video controls="controls" >
+    <source src="movie.webm" type="video/webm" >
+    <source src="movie.ogg" type="video/ogg" >
+    <source src="movie.mp4" type="video/mp4">
+    You browser does not support video.
+  </video>
+  ```
+* source支持media属性
+* source支持type属性：区分源文件的使用场景
+* video内还支持标签track（可有多个）：一种播放时序相关的标签，常用于字幕。
+  * 必须使用srclang属性来指定语言
+  * kind属性：
+    * subtitles：字幕，不一定是翻译，也可能是补充性说明
+    * captions：报幕内容（可能包含演员职员表等元信息，适合听障人士或没打开声音的人了解音频内容）
+    * descriptions：视频描述信息
+    * chapters：用于浏览器视频内容
+    * metadata：给代码提供的元信息，对普通用户不可见
+
+### audio标签
+
+同picture和video，没啥历史兼容问题，使用src也是推荐的
+
+# iframe标签
+
+嵌入一个完整网页，但是不推荐使用
+* 移动端无法指定大小，内容会被完全平铺到父级页面上
+* 是各种安全问题的重灾区：opener、window.name、css的opacity等等
+* 新标准中，加入了sandbox模式和srcdoc属性
+

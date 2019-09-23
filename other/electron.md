@@ -1,4 +1,4 @@
-# Electron 从 0 到 1
+# Electron 从 0 开始
 
 ## WHAT
   * 桌面应用
@@ -7,7 +7,7 @@
     * WEB开发： 使用WEB技术进行开发，利用浏览器引擎完成UI渲染，利用Node.js实现服务器端JS编程并可以调用系统API【WEB的强大生态为UI带来了无限可能，并且开发、维护成本相对较低】
   * Electron： 由Github开发，用HTML，CSS和JavaScript来构建跨平台桌面应用程序的一个开源库；通过将Chromium和Node.js合并到同一个运行时环境中，并将其打包为Mac，Windows和Linux系统下的应用
 
-  * 优点：
+  * 优点：【浏览器沙盒/用户体验】
     * 强大生态的Web技术 -> 开发成本低，可扩展性强，UI
     * 跨平台，一套代码可打包为Windows、Linux、Mac三套软件【事实证明开发的时候，针对不同系统还是要有部分差异】
     * 直接在现有Web应用上进行扩展，提供浏览器不具备的能力
@@ -18,10 +18,24 @@
   * 市场：VS Code客户端、GitHub客户端、Atom客户端、迅雷。。。。。。
 
 ### 对比
+* 原生：（C#/C+）+稀缺、成本高，不能跨操作系统
+* QT：
 * NW.js：
+* Swing：
+* [easy-window](https://github.com/lixk/easy-window)：使用简洁，体积小；扩展少、文档少
+* [webview](https://github.com/zserge/webview)：打包后文件很小。通常是几百KB左右。开发起来不太方便([看起来就很麻烦](https://yq.aliyun.com/articles/594311))。适合做小工具
+
+* weex：
+* RN：
 
 ### 结构
   ![electron组成](../img/other/electron1.png)
+
+
+### 具备知识
+* 前端基础：html、css、js及相关工程化技术
+* node基础：what、how、Do；npm；Express/Koa了解一下
+* 对原生开发有一定理解
 
 #### 运行时
 两种进程：
@@ -30,7 +44,6 @@
 
 
 ## HOW
-
 TODO: 
 * 主进程，渲染进程间[通信](https://electronjs.org/docs/faq#how-to-share-data-between-web-pages)
     * [ipcRenderer](https://electronjs.org/docs/api/ipc-renderer)
@@ -79,7 +92,10 @@ Electron同时在主进程和渲染进程中对Node.js 暴露了所有的接口�
   * 可以在你的应用程序中使用Node.js的模块。
     * 注：原生Node.js模块 (即指，需要编译源码过后才能被使用的模块) 需要在编译后才能和Electron一起使用。
 
-
+#### 开发注意
+* 掌握基本API，从基础开始
+* 思路要清晰（靠理解）；分清两种进程，代码层次结构才能组织合理【这里很考验眼界和组织能力，在项目进展中探索吧】
+* 合理定位node在里面的觉得（不是nodejs中的服务端）【这块我也还在思考理解中】
 
 
 ### 调试
@@ -94,12 +110,15 @@ Electron同时在主进程和渲染进程中对Node.js 暴露了所有的接口�
 
 ### 测试：见文档调试部分
   
-### 应用部署
+### 打包及应用部署
+
+ 打包出来的APP很大啊。。。一个很小的程序打包后也要几十兆
+
   * 手动： 太麻烦 算了
   * 第三方工具：
     * electron-forge：好用的说
       * 只能打包你当前机器的平台包，比如你用OSX是无法打出windows平台安装包的；这两个参数不填写的话，默认和当前系统一致
-      * Windows我是不想装了，谁爱整谁整。。。
+      * Windows：打包OK，直接是exe执行文件
 
 
 ## 安全
@@ -117,30 +136,3 @@ Electron 不是一个 Web 浏览器。 它允许您使用熟悉的 Web 技术构
 
 ## electron-vue
 
-
-# ifram
-
-X-Frame-Options是一个相应头，主要是描述服务器的网页资源的iframe权限。目前的支持度是IE8+(已经很好了啊喂)有3个选项:
-  * DENY：当前页面不能被嵌套iframe里，即便是在相同域名的页面中嵌套也不允许,也不允许网页中有嵌套iframe
-  * SAMEORIGIN：iframe页面的地址只能为同源域名下的页面
-  * ALLOW-FROM：可以在指定的origin url的iframe中加载
-
-  ```js
-    if (top.location.hostname != window.location.hostname) { 
-    　　　　top.location.href =window.location.href;
-    }
-
-  ```
-
-对于第二种方式的跨域（主域相同而子域不同）,可以使用iframe进行解决。
-在两个不同子域下(某一方使用iframe嵌套在另一方)，
-即:
-http: //www.foo.com/a.html和http: //script.foo.com/b.html
-两个文件中分别加上document.domain = ‘foo.com’,指定相同的主域，然后,两个文档就可以进行交互。
-```js
-document.domain = 'foo.com';
-```
-
-如果你设置的iframe的域名和你top window的域名完全不同。 则可以使用CDM(cross document messaging)进行跨域消息的传递。该API的兼容性较好 ie8+都支持.
-发送消息: 使用postmessage方法
-接受消息: 监听message事件
