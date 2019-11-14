@@ -1,4 +1,5 @@
 # Summary
+
 * [Introduction](README.md)
 * [TODOS](TODOS.md)
 * [HTML](html/README.md)
@@ -30,9 +31,12 @@
     * [Vue.响应式](vue/responsive.md)
 * [React](react/README.md)
     * [入门学习笔记](react/note.md)
+* [微前端](microfrontend/README.md)
+    * [About Aicrofrontend](microfrontend/about.md)
 * [Tools](tools/README.md)
     * [VC](tools/vc.md)
     * [SHELL](tools/shell.md)
+    * [NPM脚本](tools/npm-script.md)
 * [Node](node/README.md)
     * [基础](node/base.md)
 * [Other](other/README.md)
@@ -43,6 +47,9 @@
     * [前端打印方案](other/print.md)
     * [Electron](other/electron.md)
     * [Saas方案](other/saas.md)
+    * [多系统上线解决方案](other/autopks.md)
+    * [微信公众号接入方案（支付）](other/wePay.md)
+    * [node中后台方案](other/node.md)
 * [Algorithm](algorithm/README.md)
 * [MIS-前端改造解决方案](lsh/mis-solve.md)
 * [About Gitbook](GITBOOK.md)
