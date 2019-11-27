@@ -53,6 +53,7 @@
     * [多系统上线解决方案](other/autopks.md)
     * [微信公众号接入方案（支付）](other/wePay.md)
     * [node中后台方案](other/node.md)
+    * [FE组件库方案](other/fecommon.md)
 * [Algorithm](algorithm/README.md)
 * [MIS-前端改造解决方案](lsh/mis-solve.md)
 * [About Gitbook](GITBOOK.md)
