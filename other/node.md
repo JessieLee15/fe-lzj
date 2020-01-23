@@ -65,8 +65,9 @@ https://tech.meituan.com/2018/09/06/fe-tiny-spa.html
 ## 需求：
 1. 响应格式的数据：适应不同屏幕 【聚合、裁剪、适配】
 
-
 中台构想：
 集成API
 二次处理接口数据
 接口可视化编辑
+
+Bigpiper

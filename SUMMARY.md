@@ -19,6 +19,7 @@
     * [Thread](js/thread.md)
     * [类型](js/type.md)
     * [对象](js/object.md)
+    * [模块](js/module.md)
 * [Browser](browser/README.md)
     * [坑坑坑](browser/keng.md)
     * [你了解URL吗](browser/url.md)
