@@ -102,7 +102,7 @@ pm2是一个自带负载均衡功能的node应用的进程管理器。
 
 ## 五、开发
 
-### 0. 项目目前功能及接口约定，先看一下 s
+### 0. 项目目前功能及接口约定，先看一下
   [接口文档](https://shimo.im/folder/8dVQdkXPVcHH93wR)
 
 ### 1. 移步
@@ -112,14 +112,29 @@ pm2是一个自带负载均衡功能的node应用的进程管理器。
   * log4js文档参考[Nodejs log4js日志管理详解](https://www.jianshu.com/p/9604d08db899)
   ![Nodejs log4js日志](../img/node/node/log4js.png)
 
-### 3. 关于Koa
+### 3. express Routes
+#### 路由
+http://dev.market-mis.dev01.saasdev.dmallmax.com/order/user/list
+* 默认80端口，浏览器会自动转换
+* 协议 服务器主机地址（PC做DNS转换为IP） path
+* path【/order/user/list】即为路由的路径，真正到达服务器的资源定位符，具体服务内部根据这个定位服判断给出什么响应
 
+#### express Routes
+> Routing refers to how an application’s endpoints (URIs) respond to client requests.
+> You define routing using methods of the Express app object that correspond to HTTP methods; for example, app.get() to handle GET requests and app.post to handle POST requests.
+> You can also use app.all() to handle all HTTP methods and app.use() to specify middleware as the callback function
+Express 是一个自身功能极简，完全是由路由和中间件构成一个的 web 开发框架：从本质上来说，一个 Express 应用就是在调用各种中间件。
 
-### 4. 关于JS
-TODO: 
-1. promise await 本身就是异步的，第二个请求进来会马上创建child process 【这一说法是真的？那就很秀了】
+中间件（Middleware） 是一个函数，它可以访问请求对象（request object (req)）, 响应对象（response object (res)）, 和next 的变量。
 
-### express Routes
+路由get、post这些东西，就是中间件，中间件讲究顺序，匹配上第一个之后，就不会往后匹配了。next函数才能够继续往后匹配。
+
+* app.use()
+  * 非精确匹配
+* app.get()
+  * 精确匹配
+* app.post()
+  * 精确匹配
 
 Nodejs express 框架之 路由与中间件: https://www.rokub.com/7066.html
 Express路由和中间件: https://www.cnblogs.com/xuxiaozhi/p/7976107.html
@@ -128,9 +143,21 @@ Express路由和中间件: https://www.cnblogs.com/xuxiaozhi/p/7976107.html
 
 https://tech.meituan.com/2018/09/06/fe-tiny-spa.html
 
+### 4. 关于Koa
+TODO: 下次分享【源码解读，就四个文件】
 
-## 项目总结
+### 5. 关于JS
+TODO: 下次分享【JS规范、JS运行、浏览器端JS与NODEJS、主要模块等等，分几个专题】
+1. promise await 本身就是异步的，第二个请求进来会马上创建child process 【这一说法是真的？那就很秀了】
+2. module
+3. HTTP
+
+## 六、项目总结
 ### 项目开发曲线
+TODO:
+## 七、问答讨论
+
+
 ---
 # 参考文章：
 * Node.js运行原理、高并发性能测试对比及生态圈汇总： https://segmentfault.com/a/1190000019425388?utm_source=tag-newest
