@@ -1,4 +1,4 @@
-# node中后台方案
+# node项目分析-FE分享
 
 ## 一、概念知识
 
@@ -109,8 +109,10 @@ pm2是一个自带负载均衡功能的node应用的进程管理器。
   [node.js-server项目README](https://gitee.com/lsh_front_end/node.js-server/tree/saas-dev/)
 
 ### 2. node.js-server项目的中间件、异常处理及Log，见FeSaasService.xmind
+  * 截图：
+    ![中间件、异常处理及Log](../img/node/node/feServicexmind.png)
   * log4js文档参考[Nodejs log4js日志管理详解](https://www.jianshu.com/p/9604d08db899)
-  ![Nodejs log4js日志](../img/node/node/log4js.png)
+    ![Nodejs log4js日志](../img/node/node/log4js.png)
 
 ### 3. express Routes
 #### 路由
@@ -118,30 +120,43 @@ http://dev.market-mis.dev01.saasdev.dmallmax.com/order/user/list
 * 默认80端口，浏览器会自动转换
 * 协议 服务器主机地址（PC做DNS转换为IP） path
 * path【/order/user/list】即为路由的路径，真正到达服务器的资源定位符，具体服务内部根据这个定位服判断给出什么响应
+* 路由：定义 响应
 
 #### express Routes
 > Routing refers to how an application’s endpoints (URIs) respond to client requests.
 > You define routing using methods of the Express app object that correspond to HTTP methods; for example, app.get() to handle GET requests and app.post to handle POST requests.
 > You can also use app.all() to handle all HTTP methods and app.use() to specify middleware as the callback function
+
+* app.use()
+  * 非精确匹配
+  * app.use(path,callback)中的callback既可以是router对象又可以是函数
+* app.get(), app.post()
+  * 精确匹配
+  * app.get(path,callback)中的callback只能是函数
+
+当一个路径有多个匹配规则时，使用app.use，否则使用相应的app.method(get、post)
+
+#### 中间件
+
 Express 是一个自身功能极简，完全是由路由和中间件构成一个的 web 开发框架：从本质上来说，一个 Express 应用就是在调用各种中间件。
 
 中间件（Middleware） 是一个函数，它可以访问请求对象（request object (req)）, 响应对象（response object (res)）, 和next 的变量。
 
-路由get、post这些东西，就是中间件，中间件讲究顺序，匹配上第一个之后，就不会往后匹配了。next函数才能够继续往后匹配。
-
-* app.use()
-  * 非精确匹配
-* app.get()
-  * 精确匹配
-* app.post()
-  * 精确匹配
-
-Nodejs express 框架之 路由与中间件: https://www.rokub.com/7066.html
-Express路由和中间件: https://www.cnblogs.com/xuxiaozhi/p/7976107.html
-
-
-
-https://tech.meituan.com/2018/09/06/fe-tiny-spa.html
+* 理解： 
+  * 执行任何代码。
+  * 修改请求和响应对象。
+  * 终结请求-响应循环。
+  * 调用堆栈中的下一个中间件
+* 结构：```app.use（[path]，function）```
+  * path：是路由的url，默认参数‘/'，意义是路由到这个路径时使用这个中间件
+  * function：中间件函数
+  * 这个中间件函数可以理解为就是function(request,response,next)
+* 分类
+  * 应用级中间件
+  * 路由级中间件
+  * 错误处理中间件
+  * 内置中间件
+  * 第三方中间件
 
 ### 4. 关于Koa
 TODO: 下次分享【源码解读，就四个文件】
@@ -154,16 +169,18 @@ TODO: 下次分享【JS规范、JS运行、浏览器端JS与NODEJS、主要模�
 
 ## 六、项目总结
 ### 项目开发曲线
-TODO:
+
 ## 七、问答讨论
 
 
 ---
 # 参考文章：
-* Node.js运行原理、高并发性能测试对比及生态圈汇总： https://segmentfault.com/a/1190000019425388?utm_source=tag-newest
-* 关于nodejs作为系统中间件的理解： https://blog.csdn.net/qq_27965129/article/details/78766313
-* 浅谈前后端分离与实践 之 nodejs 中间层服务：https://zhuanlan.zhihu.com/p/30384677
-* node.js之十大Web框架： https://www.cnblogs.com/youcong/p/10503099.html
-* 从原理上理解NodeJS的适用场景： https://www.cnblogs.com/kevin9103/p/5053517.html
-* Nodejs项目服务器部署： https://blog.csdn.net/u014465934/article/details/83663407
-* node项目架构与优化： https://www.cnblogs.com/139199228-haicao/p/9193753.html
+* 各种官网文档最好看!!!
+* [Node.js运行原理、高并发性能测试对比及生态圈汇总](https://segmentfault.com/a/1190000019425388?utm_source=tag-newest)
+* [关于nodejs作为系统中间件的理解](https://blog.csdn.net/qq_27965129/article/details/78766313)
+* [浅谈前后端分离与实践 之 nodejs 中间层服务](https://zhuanlan.zhihu.com/p/30384677)
+* [node.js之十大Web框架](https://www.cnblogs.com/youcong/p/10503099.html)
+* [从原理上理解NodeJS的适用场景](https://www.cnblogs.com/kevin9103/p/5053517.html)
+* [Nodejs项目服务器部署](https://blog.csdn.net/u014465934/article/details/83663407)
+* [node项目架构与优化](https://www.cnblogs.com/139199228-haicao/p/9193753.html)
+* [Express路由和中间件](https://www.cnblogs.com/xuxiaozhi/p/7976107.html)
