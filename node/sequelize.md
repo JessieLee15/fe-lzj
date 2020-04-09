@@ -52,17 +52,5 @@
 > Also, all Sequelize promises are in fact Bluebird promises, so you have the rich Bluebird API to use as well (for example, using finally, tap, tapCatch, map, mapSeries, etc). You can access the Bluebird constructor used internally by Sequelize with Sequelize.Promise, if you want to set any Bluebird specific options.
 
 
-### 项目规划
-* 所有删除都做软删除：启用paranoid及timestamps
-* 统一使用sequelize.define的方式创建model，model内允许自定义options, 会覆盖默认的自定义
-* 
-
-
-#### 明天规划
-1. 上午先梳理现在mysql初始化代码、开发目录规划、demo；代码迁移到node.js-server项目
-2. 下午：先把数据同步过来，node先接现在的CMS接口；后期版本啥的再扩展
-  * 先整一下现在测试服的数据库服务，建库、跟胡鹏商量先把现在的CMS测试数据同步过来
-  * 先根据现有CMS的接口开发node接口，具体的看明天进度给后面时间
-3. 后期还是一边开发一边优化摸索吧，中间应该还有自测或测试的时间
 
 
