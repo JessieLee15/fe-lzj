@@ -42,6 +42,7 @@
 * [Node](node/README.md)
     * [node中后台方案](node/node.md)
     * [基础](node/base.md)
+    * [Node单线程](node/thread.md)
     * [KOA](node/koa.md)
     * [sequelize](node/sequelize.md)
 * [Linux](linux/README.md)
